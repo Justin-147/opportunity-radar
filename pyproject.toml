@@ -1,5 +1,5 @@
 [build-system]
-requires = ["setuptools>=68"]
+requires = ["setuptools>=68", "wheel"]
 build-backend = "setuptools.build_meta"
 
 [project]
@@ -9,15 +9,16 @@ description = "Local-first Singapore AI and FinTech opportunity intelligence pro
 readme = "README.md"
 requires-python = ">=3.11"
 dependencies = [
-  "pydantic>=2.0",
-  "PyYAML>=6.0",
+  "pydantic>=2.6",
   "pandas>=2.0",
-  "Jinja2>=3.1",
+  "PyYAML>=6.0",
+  "jinja2>=3.1",
   "markdown>=3.5",
-  "streamlit>=1.30",
-  "pytest>=8.0",
-  "python-dotenv>=1.0",
+  "streamlit>=1.32",
 ]
+
+[project.optional-dependencies]
+dev = ["pytest>=7.4"]
 
 [project.scripts]
 opportunity-radar = "opportunity_radar.main:main"
@@ -28,4 +29,3 @@ where = ["src"]
 [tool.pytest.ini_options]
 pythonpath = ["src"]
 testpaths = ["tests"]
-addopts = "-q"

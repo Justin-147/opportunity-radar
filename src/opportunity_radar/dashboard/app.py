@@ -92,13 +92,13 @@ def main() -> None:
             st.bar_chart(frame[["score"]])
 
     st.subheader("Top opportunities")
-    st.dataframe(item_frame(report.get("top_opportunities", [])), use_container_width=True)
+    st.dataframe(item_frame(report.get("top_opportunities", [])), width="stretch")
 
     st.subheader("Job opportunities")
-    st.dataframe(item_frame(report.get("jobs", [])), use_container_width=True)
+    st.dataframe(item_frame(report.get("jobs", [])), width="stretch")
 
     st.subheader("Side-hustle ideas")
-    st.dataframe(item_frame(report.get("side_hustles", [])), use_container_width=True)
+    st.dataframe(item_frame(report.get("side_hustles", [])), width="stretch")
 
     st.subheader("Markdown report preview")
     language = st.radio("Language", ["en", "zh"], horizontal=True)

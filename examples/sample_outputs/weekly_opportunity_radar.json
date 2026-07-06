@@ -1,7 +1,7 @@
 {
   "id": "2026-07-06_singapore_ai_fintech",
   "profile": "singapore_ai_fintech",
-  "generated_at": "2026-07-06T09:50:01.261821",
+  "generated_at": "2026-07-06T11:00:12.301030",
   "title": "Singapore AI & FinTech Opportunity Radar | 2026-07-06",
   "executive_summary": [
     "Strongest signals this week cluster around event, job for the Singapore AI & FinTech Transition audience.",
@@ -9,6 +9,11 @@
     "The most portfolio-friendly direction is to convert policy, company, and job signals into small report automation or risk analytics artifacts.",
     "Recommended focus this week: pick one job family, one portfolio artifact, and one networking or event action."
   ],
+  "this_week_focus": {
+    "primary_role_family": "AI Governance / Risk Analytics",
+    "best_portfolio_artifact": "AI agent control checklist or risk intelligence dashboard",
+    "suggested_networking_action": "register for one FinTech, RegTech, or AI governance event this week"
+  },
   "top_opportunities": [
     {
       "id": "singapore-fintech-risk-hackathon-b419e843",
@@ -119,7 +124,7 @@
       "uniqueness_score": 0.84,
       "final_score": 0.9065,
       "fit_reason": "Strong fit for AI, AI Governance, AI Governance Analyst because it connects market signal, skills, and a clear next action.",
-      "suggested_action": "Review requirements, map 2-3 portfolio bullets, and apply if fit is clear.",
+      "suggested_action": "Update your resume with AI governance, risk analytics, and workflow automation evidence, then apply through the company careers page.",
       "source_notes": ""
     },
     {
@@ -426,7 +431,7 @@
       "uniqueness_score": 0.84,
       "final_score": 0.9065,
       "fit_reason": "Strong fit for AI, AI Governance, AI Governance Analyst because it connects market signal, skills, and a clear next action.",
-      "suggested_action": "Review requirements, map 2-3 portfolio bullets, and apply if fit is clear.",
+      "suggested_action": "Update your resume with AI governance, risk analytics, and workflow automation evidence, then apply through the company careers page.",
       "source_notes": ""
     },
     {
@@ -464,7 +469,7 @@
       "uniqueness_score": 0.68,
       "final_score": 0.8705,
       "fit_reason": "Strong fit for AI, FinTech, Data Analyst because it connects market signal, skills, and a clear next action.",
-      "suggested_action": "Review requirements, map 2-3 portfolio bullets, and apply if fit is clear.",
+      "suggested_action": "Update your resume with AI governance, risk analytics, and workflow automation evidence, then apply through the company careers page.",
       "source_notes": ""
     },
     {
@@ -504,7 +509,7 @@
       "uniqueness_score": 0.68,
       "final_score": 0.8695,
       "fit_reason": "Strong fit for FinTech, Risk Analytics, Data Analyst because it connects market signal, skills, and a clear next action.",
-      "suggested_action": "Review requirements, map 2-3 portfolio bullets, and apply if fit is clear.",
+      "suggested_action": "Update your resume with AI governance, risk analytics, and workflow automation evidence, then apply through the company careers page.",
       "source_notes": ""
     },
     {
@@ -542,7 +547,7 @@
       "uniqueness_score": 0.68,
       "final_score": 0.8555,
       "fit_reason": "Strong fit for AI, RegTech, Product Analyst because it connects market signal, skills, and a clear next action.",
-      "suggested_action": "Review requirements, map 2-3 portfolio bullets, and apply if fit is clear.",
+      "suggested_action": "Update your resume with AI governance, risk analytics, and workflow automation evidence, then apply through the company careers page.",
       "source_notes": ""
     },
     {
@@ -581,7 +586,7 @@
       "uniqueness_score": 0.68,
       "final_score": 0.8495,
       "fit_reason": "Strong fit for AI, Digital Transformation, Digital Transformation Consultant because it connects market signal, skills, and a clear next action.",
-      "suggested_action": "Review requirements, map 2-3 portfolio bullets, and apply if fit is clear.",
+      "suggested_action": "Update your resume with AI governance, risk analytics, and workflow automation evidence, then apply through the company careers page.",
       "source_notes": ""
     },
     {
@@ -621,7 +626,7 @@
       "uniqueness_score": 0.68,
       "final_score": 0.8335,
       "fit_reason": "Strong fit for AI, AI Application Engineer because it connects market signal, skills, and a clear next action.",
-      "suggested_action": "Review requirements, map 2-3 portfolio bullets, and apply if fit is clear.",
+      "suggested_action": "Update your resume with AI governance, risk analytics, and workflow automation evidence, then apply through the company careers page.",
       "source_notes": ""
     },
     {
@@ -659,7 +664,7 @@
       "uniqueness_score": 0.68,
       "final_score": 0.7995,
       "fit_reason": "Strong fit for FinTech, Data Analytics, Data Analyst because it connects market signal, skills, and a clear next action.",
-      "suggested_action": "Review requirements, map 2-3 portfolio bullets, and apply if fit is clear.",
+      "suggested_action": "Update your resume with AI governance, risk analytics, and workflow automation evidence, then apply through the company careers page.",
       "source_notes": ""
     },
     {
@@ -697,7 +702,7 @@
       "uniqueness_score": 0.68,
       "final_score": 0.7885,
       "fit_reason": "Strong fit for AI, AI Governance because it connects market signal, skills, and a clear next action.",
-      "suggested_action": "Review requirements, map 2-3 portfolio bullets, and apply if fit is clear.",
+      "suggested_action": "Update your resume with AI governance, risk analytics, and workflow automation evidence, then apply through the company careers page.",
       "source_notes": ""
     }
   ],
@@ -1405,7 +1410,7 @@
       "url": "https://example.org/opportunity-radar/learning/2",
       "source": "Generated Learning Priorities",
       "source_type": "manual",
-      "published_at": "2026-07-06T09:50:01.261821",
+      "published_at": "2026-07-06T11:00:12.301030",
       "category": "learning",
       "location": "Remote",
       "company": null,
@@ -1445,7 +1450,7 @@
       "url": "https://example.org/opportunity-radar/learning/1",
       "source": "Generated Learning Priorities",
       "source_type": "manual",
-      "published_at": "2026-07-06T09:50:01.261821",
+      "published_at": "2026-07-06T11:00:12.301030",
       "category": "learning",
       "location": "Remote",
       "company": null,
@@ -1483,7 +1488,7 @@
       "url": "https://example.org/opportunity-radar/learning/3",
       "source": "Generated Learning Priorities",
       "source_type": "manual",
-      "published_at": "2026-07-06T09:50:01.261821",
+      "published_at": "2026-07-06T11:00:12.301030",
       "category": "learning",
       "location": "Remote",
       "company": null,
@@ -1521,7 +1526,7 @@
       "url": "https://example.org/opportunity-radar/learning/4",
       "source": "Generated Learning Priorities",
       "source_type": "manual",
-      "published_at": "2026-07-06T09:50:01.261821",
+      "published_at": "2026-07-06T11:00:12.301030",
       "category": "learning",
       "location": "Remote",
       "company": null,
@@ -1559,7 +1564,7 @@
       "url": "https://example.org/opportunity-radar/learning/5",
       "source": "Generated Learning Priorities",
       "source_type": "manual",
-      "published_at": "2026-07-06T09:50:01.261821",
+      "published_at": "2026-07-06T11:00:12.301030",
       "category": "learning",
       "location": "Remote",
       "company": null,
@@ -1593,9 +1598,9 @@
     }
   ],
   "actions": [
-    "Tailor a resume and portfolio story for AI Governance Analyst.",
-    "Compare requirements from Merlion Trust Bank and KopiPay Network to find recurring skill evidence.",
-    "Validate the side-hustle idea 'AI governance checklist product' with 3 target users."
+    "Update one resume section with evidence for AI Governance Analyst, then map the role to one portfolio artifact.",
+    "Compare requirements from Merlion Trust Bank and KopiPay Network to identify recurring AI, analytics, and risk skills.",
+    "Validate the side-hustle idea 'AI governance checklist product' with 5-10 target users before building more code."
   ],
   "source_list": [
     {

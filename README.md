@@ -1,51 +1,65 @@
 # Opportunity Radar: Singapore AI & FinTech Opportunity Intelligence System
 
-Opportunity Radar is a local-first opportunity intelligence prototype for technical, research, data, and engineering professionals exploring Singapore AI, FinTech, RegTech, risk analytics, and digital transformation opportunities.
+![tests](https://github.com/Justin-147/opportunity-radar/actions/workflows/tests.yml/badge.svg)
 
-It converts manually curated or public-source-style opportunity signals into structured weekly reports with relevance scoring, actionability scoring, opportunity categories, suggested actions, and source lists.
+Opportunity Radar is a local-first opportunity intelligence system for technical, research, data, and engineering professionals exploring Singapore AI, FinTech, RegTech, risk analytics, data analytics, and digital transformation opportunities.
+
+It converts curated job, policy, company, event, learning, and side-hustle signals into structured weekly opportunity briefs with relevance scoring, actionability scoring, suggested next actions, and source lists.
+
+The project is designed as a portfolio-ready prototype and a foundation for a future newsletter, consulting service, or opportunity intelligence product.
+
+Opportunity Radar does not provide job guarantees, immigration advice, legal advice, investment advice, automated job applications, or automated outreach services.
 
 ## Target Users
 
-- Chinese research professionals transitioning into AI, data, or FinTech roles
-- Engineers exploring Singapore opportunities
-- Data analysts looking for FinTech, RegTech, or risk analytics roles
-- AI application builders looking for business and portfolio ideas
-- Professionals who want a weekly opportunity brief instead of raw job feeds
+Opportunity Radar is designed for:
+
+- research professionals transitioning into AI / data / FinTech roles;
+- engineers exploring Singapore opportunities;
+- data analysts looking for FinTech or RegTech roles;
+- AI application builders looking for business ideas;
+- professionals who want a weekly opportunity brief rather than raw job feeds.
 
 ## What It Does
 
-- Imports synthetic or manually curated CSV/YAML opportunity signals
-- Normalizes jobs, events, policy signals, company signals, side-hustle ideas, and learning priorities
-- Deduplicates opportunities by URL and title/company
-- Scores each item by relevance, actionability, freshness, credibility, and uniqueness
-- Generates English and Chinese Markdown reports
-- Converts reports to HTML
-- Writes processed JSON for dashboarding
-- Provides a simple Streamlit dashboard
+- imports curated job, policy, event, company, learning, and side-hustle signals;
+- normalizes them into a common `OpportunityItem` schema;
+- deduplicates similar items;
+- classifies items by category;
+- scores relevance, actionability, freshness, credibility, and uniqueness;
+- ranks opportunities;
+- generates English and Chinese weekly reports;
+- provides a simple Streamlit dashboard.
 
 ## What It Does Not Do
 
-- No SaaS, login, payment, or multi-user system
-- No automatic job applications or resume submission
-- No LinkedIn scraping, paywalled scraping, private data collection, or aggressive web scraping
-- No immigration advice, legal advice, investment advice, job guarantees, or automated outreach spam
+- does not scrape LinkedIn;
+- does not bypass login pages;
+- does not auto-apply to jobs;
+- does not provide immigration or legal advice;
+- does not provide investment advice;
+- does not guarantee job outcomes;
+- does not collect private personal data.
 
 ## Architecture
 
+Opportunity Radar uses a deterministic local pipeline:
+
 ```text
-config/                 Profiles, sources, scoring rules, report template
-examples/sample_inputs/ Synthetic CSV/YAML demo inputs
-src/opportunity_radar/  Models, pipeline, writers, CLI, dashboard
-tests/                  Pytest suite
-reports/                Generated Markdown/HTML/JSON outputs
-data/processed/         Processed report JSON
+manual CSV/YAML inputs
+  -> import and normalize
+  -> deduplicate and classify
+  -> score and rank
+  -> build report context
+  -> write Markdown, HTML, and JSON
+  -> inspect in Streamlit
 ```
 
 ## Quick Start
 
 ```powershell
 cd opportunity-radar
-python -m pip install -e .
+python -m pip install -e .[dev]
 python -m opportunity_radar.main generate --profile singapore_ai_fintech --mock
 ```
 
@@ -76,7 +90,7 @@ Generate and refresh stable examples:
 python -m opportunity_radar.main generate --profile singapore_ai_fintech --mock --copy-samples
 ```
 
-Outputs:
+Expected outputs:
 
 ```text
 data/processed/YYYY-MM-DD_singapore_ai_fintech.json
@@ -92,25 +106,31 @@ reports/html/YYYY-MM-DD_singapore_ai_fintech_zh.html
 streamlit run src/opportunity_radar/dashboard/app.py
 ```
 
-The dashboard shows the selected profile, generated report selector, total opportunities, category distribution, top opportunities, job opportunities, side-hustle ideas, score distribution, and a Markdown preview.
+The dashboard shows a report selector, total opportunities, category distribution, score distribution, top opportunities, job opportunities, side-hustle ideas, and a Markdown report preview.
+
+## Screenshots
+
+Screenshots can be added later to demonstrate:
+
+- the Opportunity Dashboard;
+- the generated weekly opportunity report;
+- category and score distributions.
 
 ## Sample Inputs
 
-The sample inputs are synthetic and stored in `examples/sample_inputs/`:
+The sample inputs are synthetic, Singapore-focused, and safe to publish:
 
-- `singapore_ai_fintech_jobs.csv`
-- `sample_policy_signals.yaml`
-- `sample_events.yaml`
-- `sample_side_hustle_ideas.yaml`
-- `sample_company_signals.yaml`
+- `examples/sample_inputs/singapore_ai_fintech_jobs.csv`
+- `examples/sample_inputs/sample_policy_signals.yaml`
+- `examples/sample_inputs/sample_events.yaml`
+- `examples/sample_inputs/sample_side_hustle_ideas.yaml`
+- `examples/sample_inputs/sample_company_signals.yaml`
 
 ## Sample Reports
 
-Stable sample outputs are stored in:
-
-- `examples/sample_reports/weekly_opportunity_radar_en.md`
-- `examples/sample_reports/weekly_opportunity_radar_zh.md`
-- `examples/sample_outputs/weekly_opportunity_radar.json`
+- [English weekly sample report](examples/sample_reports/weekly_opportunity_radar_en.md)
+- [Chinese weekly sample report](examples/sample_reports/weekly_opportunity_radar_zh.md)
+- [Sample JSON output](examples/sample_outputs/weekly_opportunity_radar.json)
 
 ## Scoring Formula
 
@@ -123,12 +143,55 @@ final_score =
 + 0.10 * uniqueness_score
 ```
 
+- `relevance_score`: how closely the opportunity matches the selected audience profile.
+- `actionability_score`: whether the item suggests a clear next step such as apply, register, build, learn, or contact.
+- `freshness_score`: how recent the opportunity signal is.
+- `credibility_score`: reliability of the source type.
+- `uniqueness_score`: whether the item adds distinct value rather than duplicating other signals.
+
+## Repository Structure
+
+```text
+config/                 Profiles, sources, scoring rules, report template
+docs/screenshots/       Placeholder for future dashboard and report screenshots
+examples/sample_inputs/ Synthetic CSV/YAML demo inputs
+examples/sample_reports Curated stable sample Markdown reports
+examples/sample_outputs Curated stable sample JSON output
+src/opportunity_radar/  Models, pipeline, writers, CLI, dashboard
+tests/                  Pytest suite
+reports/                Generated Markdown/HTML/JSON outputs, ignored by Git
+data/processed/         Generated processed JSON, ignored by Git
+```
+
+## Repository Hygiene
+
+Generated reports and processed data are intentionally ignored by Git:
+
+- `reports/`
+- `data/processed/`
+- `data/cache/`
+
+Curated examples are stored under:
+
+- `examples/sample_inputs/`
+- `examples/sample_reports/`
+- `examples/sample_outputs/`
+
 ## Tests
 
 ```powershell
 pytest
 ```
 
+## Local Verification
+
+Before committing changes, run:
+
+```powershell
+pytest
+python -m opportunity_radar.main generate --profile singapore_ai_fintech --mock
+```
+
 ## Disclaimer
 
-Opportunity Radar is an informational prototype. It does not provide job guarantees, immigration advice, legal advice, investment advice, or automated job application services.
+Opportunity Radar is an informational opportunity intelligence prototype. It does not provide job guarantees, immigration advice, legal advice, investment advice, automated job application services, or automated outreach services.

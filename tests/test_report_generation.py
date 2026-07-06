@@ -34,6 +34,10 @@ def test_markdown_and_html_reports_are_generated(tmp_path):
     write_html_report(render_markdown(report, "en"), html_path, report.title)
 
     assert md_path.exists()
-    assert "# Singapore AI & FinTech Opportunity Radar" in md_path.read_text(encoding="utf-8")
+    markdown_text = md_path.read_text(encoding="utf-8")
+    assert "# Singapore AI & FinTech Opportunity Radar" in markdown_text
+    assert "## This Week Focus" in markdown_text
+    assert "- Score breakdown:" in markdown_text
+    assert "- Best for:" in markdown_text
     assert html_path.exists()
     assert "<html" in html_path.read_text(encoding="utf-8")

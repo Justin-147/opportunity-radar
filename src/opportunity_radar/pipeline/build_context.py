@@ -27,14 +27,36 @@ def build_actions(items: list[OpportunityItem]) -> list[str]:
     top_side_hustles = filter_category(items, "side_hustle", 1)
     actions = []
     if top_jobs:
-        actions.append(f"Tailor a resume and portfolio story for {top_jobs[0].title}.")
+        actions.append(
+            f"Update one resume section with evidence for {top_jobs[0].title}, then map the role to one portfolio artifact."
+        )
     if len(top_jobs) > 1:
-        actions.append(f"Compare requirements from {top_jobs[0].company} and {top_jobs[1].company} to find recurring skill evidence.")
+        actions.append(
+            f"Compare requirements from {top_jobs[0].company} and {top_jobs[1].company} to identify recurring AI, analytics, and risk skills."
+        )
     if top_side_hustles:
-        actions.append(f"Validate the side-hustle idea '{top_side_hustles[0].title}' with 3 target users.")
+        actions.append(
+            f"Validate the side-hustle idea '{top_side_hustles[0].title}' with 5-10 target users before building more code."
+        )
     while len(actions) < 3:
         actions.append("Publish one short opportunity analysis note using a synthetic or public-source-style signal.")
     return actions[:3]
+
+
+def build_this_week_focus(profile: AudienceProfile) -> dict[str, str]:
+    if profile.id == "singapore_ai_fintech":
+        return {
+            "primary_role_family": "AI Governance / Risk Analytics",
+            "best_portfolio_artifact": "AI agent control checklist or risk intelligence dashboard",
+            "suggested_networking_action": "register for one FinTech, RegTech, or AI governance event this week",
+        }
+
+    primary_roles = " / ".join(profile.target_roles[:2]) or "AI / analytics roles"
+    return {
+        "primary_role_family": primary_roles,
+        "best_portfolio_artifact": "one small report automation or analytics dashboard",
+        "suggested_networking_action": "join one relevant event or community discussion this week",
+    }
 
 
 def build_source_list(items: list[OpportunityItem]) -> list[dict[str, str]]:
@@ -61,6 +83,7 @@ def build_report_context(
     context = {
         "profile_name": profile.name,
         "generated_at": generated.isoformat(timespec="seconds"),
+        "this_week_focus": build_this_week_focus(profile),
         "top_opportunities": top_n(sorted_items, 10),
         "jobs": filter_category(sorted_items, "job", 8),
         "events": filter_category(sorted_items, "event", 5),
@@ -89,6 +112,7 @@ def build_report(
         generated_at=generated,
         title=f"Singapore AI & FinTech Opportunity Radar | {date_label}",
         executive_summary=context["executive_summary"],
+        this_week_focus=context["this_week_focus"],
         top_opportunities=context["top_opportunities"],
         jobs=context["jobs"],
         events=context["events"],
