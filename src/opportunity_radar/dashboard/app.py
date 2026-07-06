@@ -81,6 +81,15 @@ def main() -> None:
     metric_cols[1].metric("Top score", f"{frame['score'].max():.2f}" if not frame.empty else "0.00")
     metric_cols[2].metric("Categories", frame["category"].nunique() if not frame.empty else 0)
 
+    focus = report.get("this_week_focus", {})
+    if focus:
+        st.subheader("This Week Focus")
+        focus_cols = st.columns(4)
+        focus_cols[0].metric("Role family", focus.get("primary_role_family", "n/a"))
+        focus_cols[1].metric("Best-fit roles", focus.get("best_fit_roles", "n/a"))
+        focus_cols[2].metric("Portfolio artifact", focus.get("best_portfolio_artifact", "n/a"))
+        focus_cols[3].metric("Networking action", focus.get("suggested_networking_action", "n/a"))
+
     chart_cols = st.columns(2)
     with chart_cols[0]:
         st.subheader("Category distribution")

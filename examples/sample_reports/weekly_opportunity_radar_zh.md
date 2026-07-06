@@ -7,13 +7,21 @@
 - The most portfolio-friendly direction is to convert policy, company, and job signals into small report automation or risk analytics artifacts.
 - Recommended focus this week: pick one job family, one portfolio artifact, and one networking or event action.
 
-## 本周聚焦
+## 本周变化
+
+- Hiring signals are strongest around AI Governance Analyst, Data Analyst, Risk Data Analyst.
+- Company watchlist activity points to Nimbus AI Systems, HarbourPay Analytics as useful signals to track.
+- Policy and ecosystem signals continue to favor AI governance, risk controls, and digital finance talent.
+- Portfolio-friendly opportunities cluster around AI controls, payments risk analytics, and report automation.
+
+## 本周重点
 
 - 主要岗位方向：AI Governance / Risk Analytics
+- 本周最匹配岗位：AI Governance Analyst, Risk Data Analyst, RegTech Product Analyst, AI Application Engineer
 - 最值得构建的作品集产物：AI agent control checklist or risk intelligence dashboard
-- 建议的 networking 动作：register for one FinTech, RegTech, or AI governance event this week
+- 建议 networking 动作：register for one FinTech, RegTech, or AI governance event this week
 
-## Top Opportunities
+## 重点机会
 
 | 机会 | 类别 | 公司 / 来源 | 分数 | 为什么重要 | 建议行动 |
 |---|---|---|---:|---|---|
@@ -28,125 +36,135 @@
 | [Consulting firm launching AI transformation practice](https://example.org/opportunity-radar/company/straitsbridge-ai-practice) | company_signal | StraitsBridge Consulting | 0.88 | Strong fit for AI, Digital Transformation, Digital Transformation Consultant because it connects market signal, skills, and a clear next action. | Write a one-page AI workflow assessment framework. |
 | [AI governance checklist product](https://example.org/opportunity-radar/ideas/ai-governance-checklist) | side_hustle | Independent builder | 0.87 | Strong fit for AI, AI Governance, AI Governance Analyst because it connects market signal, skills, and a clear next action. | Draft a one-page checklist mapped to agent evaluation, escalation, and logging. |
 
-## Top 机会详情
+## 本周最匹配岗位方向
 
-### Singapore FinTech Risk Hackathon | Harbour Innovation Hub
+- 岗位方向：AI Governance / Risk Analytics
+- 为什么匹配：This role family connects research, data analysis, Python, risk controls, and financial services transformation.
+- 简历关键词：AI governance, risk analytics, workflow automation, Python, dashboarding, compliance analytics
+- 申请切入角度：Position your background around translating complex signals into controls, dashboards, and decision-ready reports.
 
-- 适合人群：具备 Python、data analysis、prototyping 经验的候选人
-- 为什么重要：Strong fit for AI, FinTech, Data Analyst because it connects market signal, skills, and a clear next action.
-- 建议行动：Register and prepare a payments risk dashboard idea.
-- 评分拆解：
-  - 相关性：1.00
-  - 行动价值：1.00
-  - 新鲜度：1.00
-  - 可信度：0.80
-  - 独特性：0.76
+## 本周值得关注公司
 
-### AI Governance Webinar for Financial Services | Applied AI Governance Guild
+| 公司 / 来源 | 信号 | 为什么重要 | 建议行动 |
+|---|---|---|---|
+| Nimbus AI Systems | A synthetic AI startup signal points to enterprise agent evaluation, retrieval workflows, and governance tooling. | Strong fit for AI, AI Governance, AI Application Engineer because it connects market signal, skills, and a clear next action. | Prepare an agent evaluation notebook and short technical memo. |
+| HarbourPay Analytics | A synthetic FinTech signal points to growing needs in payments risk, fraud analytics, and case review tooling. | Strong fit for FinTech, Risk Analytics, Risk Analyst because it connects market signal, skills, and a clear next action. | Prepare a payments risk analytics portfolio project. |
+| Merlion Trust Bank | A synthetic bank signal indicates hiring for AI assistants, client analytics, and portfolio reporting workflows. | Strong fit for AI, Data Analytics, AI Application Engineer because it connects market signal, skills, and a clear next action. | Build a wealth management insight dashboard case study. |
 
-- 适合人群：具备 policy analysis、risk controls 经验的候选人
-- 为什么重要：Strong fit for AI, AI Governance, AI Governance Analyst because it connects market signal, skills, and a clear next action.
-- 建议行动：Register and extract three checklist items for a portfolio artifact.
-- 评分拆解：
-  - 相关性：0.90
-  - 行动价值：0.96
-  - 新鲜度：1.00
-  - 可信度：0.80
-  - 独特性：0.92
+## 建议打造的作品集项目
+
+### AI Agent Control Checklist or Risk Intelligence Dashboard
+
+- 目标用户：AI governance analysts, risk analysts, and FinTech career transitioners
+- 解决的问题：Turns scattered AI governance and risk signals into a practical control or dashboard artifact.
+- MVP 范围：A one-page control checklist plus a small Streamlit dashboard using synthetic risk and policy signals.
+- 展示技能：Python, data modeling, risk analytics, AI governance, reporting, and dashboarding
+- 建议下一步：Build the checklist first, then add one synthetic dashboard view and a short methodology note.
+
+## 岗位机会
 
 ### AI Governance Analyst | Merlion Trust Bank
 
-- 适合人群：具备 Python、policy analysis、risk management、stakeholder communication 经验的候选人
-- 为什么重要：Strong fit for AI, AI Governance, AI Governance Analyst because it connects market signal, skills, and a clear next action.
-- 建议行动：Update your resume with AI governance, risk analytics, and workflow automation evidence, then apply through the company careers page.
+- 匹配原因：Strong fit for AI, AI Governance, AI Governance Analyst because it connects market signal, skills, and a clear next action.
+- 关键词：AI governance, risk, compliance, model controls, reporting
 - 评分拆解：
   - 相关性：1.00
   - 行动价值：0.84
   - 新鲜度：1.00
   - 可信度：0.75
   - 独特性：0.84
-
-### AI startup building enterprise agent tools | Nimbus AI Systems
-
-- 适合人群：具备 Python、APIs、evaluation、AI governance 经验的候选人
-- 为什么重要：Strong fit for AI, AI Governance, AI Application Engineer because it connects market signal, skills, and a clear next action.
-- 建议行动：Prepare an agent evaluation notebook and short technical memo.
-- 评分拆解：
-  - 相关性：0.88
-  - 行动价值：0.83
-  - 新鲜度：1.00
-  - 可信度：0.90
-  - 独特性：0.98
-
-### FinTech hiring risk analysts | HarbourPay Analytics
-
-- 适合人群：具备 SQL、Python、risk analysis、dashboarding 经验的候选人
-- 为什么重要：Strong fit for FinTech, Risk Analytics, Risk Analyst because it connects market signal, skills, and a clear next action.
-- 建议行动：Prepare a payments risk analytics portfolio project.
-- 评分拆解：
-  - 相关性：0.93
-  - 行动价值：0.75
-  - 新鲜度：1.00
-  - 可信度：0.90
-  - 独特性：0.98
-
-
-## 职位机会
-
-### AI Governance Analyst | Merlion Trust Bank
-
 - 适合人群：具备 Python、policy analysis、risk management、stakeholder communication 经验的候选人
-- 匹配原因：Strong fit for AI, AI Governance, AI Governance Analyst because it connects market signal, skills, and a clear next action.
-- 关键词：AI governance, risk, compliance, model controls, reporting
 - 建议行动：Update your resume with AI governance, risk analytics, and workflow automation evidence, then apply through the company careers page.
 
 ### Data Analyst | KopiPay Network
 
-- 适合人群：具备 SQL、Python、dashboarding、risk analysis 经验的候选人
 - 匹配原因：Strong fit for AI, FinTech, Data Analyst because it connects market signal, skills, and a clear next action.
 - 关键词：payments risk, data analytics, FinTech, fraud detection
+- 评分拆解：
+  - 相关性：1.00
+  - 行动价值：0.76
+  - 新鲜度：1.00
+  - 可信度：0.75
+  - 独特性：0.68
+- 适合人群：具备 SQL、Python、dashboarding、risk analysis 经验的候选人
 - 建议行动：Update your resume with AI governance, risk analytics, and workflow automation evidence, then apply through the company careers page.
 
 ### Risk Data Analyst | HarbourPay Analytics
 
-- 适合人群：具备 SQL、Python、pandas、data visualization 经验的候选人
 - 匹配原因：Strong fit for FinTech, Risk Analytics, Data Analyst because it connects market signal, skills, and a clear next action.
 - 关键词：FinTech, risk analytics, payments, dashboarding, anomaly detection
+- 评分拆解：
+  - 相关性：0.93
+  - 行动价值：0.84
+  - 新鲜度：1.00
+  - 可信度：0.75
+  - 独特性：0.68
+- 适合人群：具备 SQL、Python、pandas、data visualization 经验的候选人
 - 建议行动：Update your resume with AI governance, risk analytics, and workflow automation evidence, then apply through the company careers page.
 
 ### RegTech Product Analyst | LionCity RegTech Labs
 
-- 适合人群：具备 product analysis、SQL、compliance operations、user research 经验的候选人
 - 匹配原因：Strong fit for AI, RegTech, Product Analyst because it connects market signal, skills, and a clear next action.
 - 关键词：RegTech, compliance, product analytics, workflow automation
+- 评分拆解：
+  - 相关性：0.95
+  - 行动价值：0.76
+  - 新鲜度：1.00
+  - 可信度：0.75
+  - 独特性：0.68
+- 适合人群：具备 product analysis、SQL、compliance operations、user research 经验的候选人
 - 建议行动：Update your resume with AI governance, risk analytics, and workflow automation evidence, then apply through the company careers page.
 
 ### Digital Transformation Consultant | StraitsBridge Consulting
 
-- 适合人群：具备 business analysis、Python、workflow mapping、stakeholder management 经验的候选人
 - 匹配原因：Strong fit for AI, Digital Transformation, Digital Transformation Consultant because it connects market signal, skills, and a clear next action.
 - 关键词：digital transformation, AI, consulting, automation, process design
+- 评分拆解：
+  - 相关性：0.93
+  - 行动价值：0.76
+  - 新鲜度：1.00
+  - 可信度：0.75
+  - 独特性：0.68
+- 适合人群：具备 business analysis、Python、workflow mapping、stakeholder management 经验的候选人
 - 建议行动：Update your resume with AI governance, risk analytics, and workflow automation evidence, then apply through the company careers page.
 
 ### AI Application Engineer | Nimbus AI Systems
 
-- 适合人群：具备 Python、APIs、prompt engineering、evaluation 经验的候选人
 - 匹配原因：Strong fit for AI, AI Application Engineer because it connects market signal, skills, and a clear next action.
 - 关键词：AI applications, agents, RAG, automation, Python
+- 评分拆解：
+  - 相关性：0.81
+  - 行动价值：0.84
+  - 新鲜度：1.00
+  - 可信度：0.75
+  - 独特性：0.68
+- 适合人群：具备 Python、APIs、prompt engineering、evaluation 经验的候选人
 - 建议行动：Update your resume with AI governance, risk analytics, and workflow automation evidence, then apply through the company careers page.
 
 ### Data Analyst | Orchid Private Wealth
 
-- 适合人群：具备 SQL、Python、BI、financial data analysis 经验的候选人
 - 匹配原因：Strong fit for FinTech, Data Analytics, Data Analyst because it connects market signal, skills, and a clear next action.
 - 关键词：wealth management, data analytics, reporting, FinTech
+- 评分拆解：
+  - 相关性：0.91
+  - 行动价值：0.76
+  - 新鲜度：0.78
+  - 可信度：0.75
+  - 独特性：0.68
+- 适合人群：具备 SQL、Python、BI、financial data analysis 经验的候选人
 - 建议行动：Update your resume with AI governance, risk analytics, and workflow automation evidence, then apply through the company careers page.
 
 ### Research Analyst | CivicTech Policy Institute
 
-- 适合人群：具备 policy research、writing、data analysis、stakeholder interviews 经验的候选人
 - 匹配原因：Strong fit for AI, AI Governance because it connects market signal, skills, and a clear next action.
 - 关键词：AI policy, governance, research, digital finance
+- 评分拆解：
+  - 相关性：0.66
+  - 行动价值：0.84
+  - 新鲜度：1.00
+  - 可信度：0.75
+  - 独特性：0.68
+- 适合人群：具备 policy research、writing、data analysis、stakeholder interviews 经验的候选人
 - 建议行动：Update your resume with AI governance, risk analytics, and workflow automation evidence, then apply through the company careers page.
 
 
@@ -248,7 +266,7 @@
 - 下一步：Package the Opportunity Radar template into a reusable demo with three sectors.
 
 
-## 学习重点
+## 学习优先级
 
 - 技能：Payments risk analytics with Python and SQL
   为什么重要：Build the core analytics skill set behind fraud, merchant risk, and transaction monitoring roles.

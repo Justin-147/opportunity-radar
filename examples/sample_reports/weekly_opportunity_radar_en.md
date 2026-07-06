@@ -7,9 +7,17 @@
 - The most portfolio-friendly direction is to convert policy, company, and job signals into small report automation or risk analytics artifacts.
 - Recommended focus this week: pick one job family, one portfolio artifact, and one networking or event action.
 
+## What Changed This Week
+
+- Hiring signals are strongest around AI Governance Analyst, Data Analyst, Risk Data Analyst.
+- Company watchlist activity points to Nimbus AI Systems, HarbourPay Analytics as useful signals to track.
+- Policy and ecosystem signals continue to favor AI governance, risk controls, and digital finance talent.
+- Portfolio-friendly opportunities cluster around AI controls, payments risk analytics, and report automation.
+
 ## This Week Focus
 
 - Primary role family: AI Governance / Risk Analytics
+- Best-fit roles this week: AI Governance Analyst, Risk Data Analyst, RegTech Product Analyst, AI Application Engineer
 - Best portfolio artifact to build: AI agent control checklist or risk intelligence dashboard
 - Suggested networking action: register for one FinTech, RegTech, or AI governance event this week
 
@@ -28,125 +36,135 @@
 | [Consulting firm launching AI transformation practice](https://example.org/opportunity-radar/company/straitsbridge-ai-practice) | company_signal | StraitsBridge Consulting | 0.88 | Strong fit for AI, Digital Transformation, Digital Transformation Consultant because it connects market signal, skills, and a clear next action. | Write a one-page AI workflow assessment framework. |
 | [AI governance checklist product](https://example.org/opportunity-radar/ideas/ai-governance-checklist) | side_hustle | Independent builder | 0.87 | Strong fit for AI, AI Governance, AI Governance Analyst because it connects market signal, skills, and a clear next action. | Draft a one-page checklist mapped to agent evaluation, escalation, and logging. |
 
-## Top Opportunity Details
+## Best-Fit Roles This Week
 
-### Singapore FinTech Risk Hackathon | Harbour Innovation Hub
+- Role family: AI Governance / Risk Analytics
+- Why it fits: This role family connects research, data analysis, Python, risk controls, and financial services transformation.
+- Keywords to add to resume: AI governance, risk analytics, workflow automation, Python, dashboarding, compliance analytics
+- Suggested application angle: Position your background around translating complex signals into controls, dashboards, and decision-ready reports.
 
-- Best for: candidates with Python, data analysis, prototyping experience
-- Why it matters: Strong fit for AI, FinTech, Data Analyst because it connects market signal, skills, and a clear next action.
-- Suggested action: Register and prepare a payments risk dashboard idea.
-- Score breakdown:
-  - Relevance: 1.00
-  - Actionability: 1.00
-  - Freshness: 1.00
-  - Credibility: 0.80
-  - Uniqueness: 0.76
+## Top Companies to Watch
 
-### AI Governance Webinar for Financial Services | Applied AI Governance Guild
+| Company / Source | Signal | Why It Matters | Suggested Action |
+|---|---|---|---|
+| Nimbus AI Systems | A synthetic AI startup signal points to enterprise agent evaluation, retrieval workflows, and governance tooling. | Strong fit for AI, AI Governance, AI Application Engineer because it connects market signal, skills, and a clear next action. | Prepare an agent evaluation notebook and short technical memo. |
+| HarbourPay Analytics | A synthetic FinTech signal points to growing needs in payments risk, fraud analytics, and case review tooling. | Strong fit for FinTech, Risk Analytics, Risk Analyst because it connects market signal, skills, and a clear next action. | Prepare a payments risk analytics portfolio project. |
+| Merlion Trust Bank | A synthetic bank signal indicates hiring for AI assistants, client analytics, and portfolio reporting workflows. | Strong fit for AI, Data Analytics, AI Application Engineer because it connects market signal, skills, and a clear next action. | Build a wealth management insight dashboard case study. |
 
-- Best for: candidates with policy analysis, risk controls experience
-- Why it matters: Strong fit for AI, AI Governance, AI Governance Analyst because it connects market signal, skills, and a clear next action.
-- Suggested action: Register and extract three checklist items for a portfolio artifact.
-- Score breakdown:
-  - Relevance: 0.90
-  - Actionability: 0.96
-  - Freshness: 1.00
-  - Credibility: 0.80
-  - Uniqueness: 0.92
+## Portfolio Project to Build
+
+### AI Agent Control Checklist or Risk Intelligence Dashboard
+
+- Target user: AI governance analysts, risk analysts, and FinTech career transitioners
+- Problem solved: Turns scattered AI governance and risk signals into a practical control or dashboard artifact.
+- MVP scope: A one-page control checklist plus a small Streamlit dashboard using synthetic risk and policy signals.
+- Skills demonstrated: Python, data modeling, risk analytics, AI governance, reporting, and dashboarding
+- Suggested next step: Build the checklist first, then add one synthetic dashboard view and a short methodology note.
+
+## Job Opportunities
 
 ### AI Governance Analyst | Merlion Trust Bank
 
-- Best for: candidates with Python, policy analysis, risk management, stakeholder communication experience
-- Why it matters: Strong fit for AI, AI Governance, AI Governance Analyst because it connects market signal, skills, and a clear next action.
-- Suggested action: Update your resume with AI governance, risk analytics, and workflow automation evidence, then apply through the company careers page.
+- Why it fits: Strong fit for AI, AI Governance, AI Governance Analyst because it connects market signal, skills, and a clear next action.
+- Keywords: AI governance, risk, compliance, model controls, reporting
 - Score breakdown:
   - Relevance: 1.00
   - Actionability: 0.84
   - Freshness: 1.00
   - Credibility: 0.75
   - Uniqueness: 0.84
-
-### AI startup building enterprise agent tools | Nimbus AI Systems
-
-- Best for: candidates with Python, APIs, evaluation, AI governance experience
-- Why it matters: Strong fit for AI, AI Governance, AI Application Engineer because it connects market signal, skills, and a clear next action.
-- Suggested action: Prepare an agent evaluation notebook and short technical memo.
-- Score breakdown:
-  - Relevance: 0.88
-  - Actionability: 0.83
-  - Freshness: 1.00
-  - Credibility: 0.90
-  - Uniqueness: 0.98
-
-### FinTech hiring risk analysts | HarbourPay Analytics
-
-- Best for: candidates with SQL, Python, risk analysis, dashboarding experience
-- Why it matters: Strong fit for FinTech, Risk Analytics, Risk Analyst because it connects market signal, skills, and a clear next action.
-- Suggested action: Prepare a payments risk analytics portfolio project.
-- Score breakdown:
-  - Relevance: 0.93
-  - Actionability: 0.75
-  - Freshness: 1.00
-  - Credibility: 0.90
-  - Uniqueness: 0.98
-
-
-## Job Opportunities
-
-### AI Governance Analyst | Merlion Trust Bank
-
 - Best for: candidates with Python, policy analysis, risk management, stakeholder communication experience
-- Why it fits: Strong fit for AI, AI Governance, AI Governance Analyst because it connects market signal, skills, and a clear next action.
-- Keywords: AI governance, risk, compliance, model controls, reporting
 - Suggested action: Update your resume with AI governance, risk analytics, and workflow automation evidence, then apply through the company careers page.
 
 ### Data Analyst | KopiPay Network
 
-- Best for: candidates with SQL, Python, dashboarding, risk analysis experience
 - Why it fits: Strong fit for AI, FinTech, Data Analyst because it connects market signal, skills, and a clear next action.
 - Keywords: payments risk, data analytics, FinTech, fraud detection
+- Score breakdown:
+  - Relevance: 1.00
+  - Actionability: 0.76
+  - Freshness: 1.00
+  - Credibility: 0.75
+  - Uniqueness: 0.68
+- Best for: candidates with SQL, Python, dashboarding, risk analysis experience
 - Suggested action: Update your resume with AI governance, risk analytics, and workflow automation evidence, then apply through the company careers page.
 
 ### Risk Data Analyst | HarbourPay Analytics
 
-- Best for: candidates with SQL, Python, pandas, data visualization experience
 - Why it fits: Strong fit for FinTech, Risk Analytics, Data Analyst because it connects market signal, skills, and a clear next action.
 - Keywords: FinTech, risk analytics, payments, dashboarding, anomaly detection
+- Score breakdown:
+  - Relevance: 0.93
+  - Actionability: 0.84
+  - Freshness: 1.00
+  - Credibility: 0.75
+  - Uniqueness: 0.68
+- Best for: candidates with SQL, Python, pandas, data visualization experience
 - Suggested action: Update your resume with AI governance, risk analytics, and workflow automation evidence, then apply through the company careers page.
 
 ### RegTech Product Analyst | LionCity RegTech Labs
 
-- Best for: candidates with product analysis, SQL, compliance operations, user research experience
 - Why it fits: Strong fit for AI, RegTech, Product Analyst because it connects market signal, skills, and a clear next action.
 - Keywords: RegTech, compliance, product analytics, workflow automation
+- Score breakdown:
+  - Relevance: 0.95
+  - Actionability: 0.76
+  - Freshness: 1.00
+  - Credibility: 0.75
+  - Uniqueness: 0.68
+- Best for: candidates with product analysis, SQL, compliance operations, user research experience
 - Suggested action: Update your resume with AI governance, risk analytics, and workflow automation evidence, then apply through the company careers page.
 
 ### Digital Transformation Consultant | StraitsBridge Consulting
 
-- Best for: candidates with business analysis, Python, workflow mapping, stakeholder management experience
 - Why it fits: Strong fit for AI, Digital Transformation, Digital Transformation Consultant because it connects market signal, skills, and a clear next action.
 - Keywords: digital transformation, AI, consulting, automation, process design
+- Score breakdown:
+  - Relevance: 0.93
+  - Actionability: 0.76
+  - Freshness: 1.00
+  - Credibility: 0.75
+  - Uniqueness: 0.68
+- Best for: candidates with business analysis, Python, workflow mapping, stakeholder management experience
 - Suggested action: Update your resume with AI governance, risk analytics, and workflow automation evidence, then apply through the company careers page.
 
 ### AI Application Engineer | Nimbus AI Systems
 
-- Best for: candidates with Python, APIs, prompt engineering, evaluation experience
 - Why it fits: Strong fit for AI, AI Application Engineer because it connects market signal, skills, and a clear next action.
 - Keywords: AI applications, agents, RAG, automation, Python
+- Score breakdown:
+  - Relevance: 0.81
+  - Actionability: 0.84
+  - Freshness: 1.00
+  - Credibility: 0.75
+  - Uniqueness: 0.68
+- Best for: candidates with Python, APIs, prompt engineering, evaluation experience
 - Suggested action: Update your resume with AI governance, risk analytics, and workflow automation evidence, then apply through the company careers page.
 
 ### Data Analyst | Orchid Private Wealth
 
-- Best for: candidates with SQL, Python, BI, financial data analysis experience
 - Why it fits: Strong fit for FinTech, Data Analytics, Data Analyst because it connects market signal, skills, and a clear next action.
 - Keywords: wealth management, data analytics, reporting, FinTech
+- Score breakdown:
+  - Relevance: 0.91
+  - Actionability: 0.76
+  - Freshness: 0.78
+  - Credibility: 0.75
+  - Uniqueness: 0.68
+- Best for: candidates with SQL, Python, BI, financial data analysis experience
 - Suggested action: Update your resume with AI governance, risk analytics, and workflow automation evidence, then apply through the company careers page.
 
 ### Research Analyst | CivicTech Policy Institute
 
-- Best for: candidates with policy research, writing, data analysis, stakeholder interviews experience
 - Why it fits: Strong fit for AI, AI Governance because it connects market signal, skills, and a clear next action.
 - Keywords: AI policy, governance, research, digital finance
+- Score breakdown:
+  - Relevance: 0.66
+  - Actionability: 0.84
+  - Freshness: 1.00
+  - Credibility: 0.75
+  - Uniqueness: 0.68
+- Best for: candidates with policy research, writing, data analysis, stakeholder interviews experience
 - Suggested action: Update your resume with AI governance, risk analytics, and workflow automation evidence, then apply through the company careers page.
 
 

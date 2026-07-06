@@ -8,7 +8,26 @@ It converts curated job, policy, company, event, learning, and side-hustle signa
 
 The project is designed as a portfolio-ready prototype and a foundation for a future newsletter, consulting service, or opportunity intelligence product.
 
+Opportunity Radar helps career switchers and technical professionals turn fragmented opportunity signals into a weekly action plan.
+
+Instead of showing raw job feeds, it organizes curated signals into role families, company watchlists, project ideas, learning priorities, and concrete next actions.
+
 Opportunity Radar does not provide job guarantees, immigration advice, legal advice, investment advice, automated job applications, or automated outreach services.
+
+## Why This Project Matters
+
+Opportunity discovery is often fragmented across job boards, company pages, policy announcements, events, newsletters, and informal communities.
+
+For people transitioning into AI, FinTech, RegTech, data analytics, or digital transformation roles, the hard part is not only finding information. The hard part is deciding:
+
+- which signals are relevant;
+- which roles fit their background;
+- which skills to prioritize;
+- which companies to watch;
+- which portfolio project to build next;
+- what action to take this week.
+
+Opportunity Radar turns these fragmented signals into a structured weekly opportunity brief.
 
 ## Target Users
 
@@ -98,6 +117,14 @@ reports/markdown/YYYY-MM-DD_singapore_ai_fintech_en.md
 reports/markdown/YYYY-MM-DD_singapore_ai_fintech_zh.md
 reports/html/YYYY-MM-DD_singapore_ai_fintech_en.html
 reports/html/YYYY-MM-DD_singapore_ai_fintech_zh.html
+```
+
+## Local Demo Script
+
+After installing the project, you can run the local demo workflow:
+
+```powershell
+.\scripts\run_demo.ps1
 ```
 
 ## Dashboard

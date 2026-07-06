@@ -16,13 +16,20 @@ ZH_TEMPLATE = """# 新加坡 AI 与 FinTech 机会雷达 | {{ generated_at[:10] 
 - {{ line }}
 {% endfor %}
 
-## 本周聚焦
+## 本周变化
+
+{% for line in what_changed %}
+- {{ line }}
+{% endfor %}
+
+## 本周重点
 
 - 主要岗位方向：{{ this_week_focus.primary_role_family }}
+- 本周最匹配岗位：{{ this_week_focus.best_fit_roles }}
 - 最值得构建的作品集产物：{{ this_week_focus.best_portfolio_artifact }}
-- 建议的 networking 动作：{{ this_week_focus.suggested_networking_action }}
+- 建议 networking 动作：{{ this_week_focus.suggested_networking_action }}
 
-## Top Opportunities
+## 重点机会
 
 | 机会 | 类别 | 公司 / 来源 | 分数 | 为什么重要 | 建议行动 |
 |---|---|---|---:|---|---|
@@ -30,31 +37,45 @@ ZH_TEMPLATE = """# 新加坡 AI 与 FinTech 机会雷达 | {{ generated_at[:10] 
 | [{{ item.title }}]({{ item.url }}) | {{ item.category }} | {{ item.company or item.source }} | {{ "%.2f"|format(item.final_score) }} | {{ item.fit_reason }} | {{ item.suggested_action }} |
 {% endfor %}
 
-## Top 机会详情
+## 本周最匹配岗位方向
 
-{% for item in top_opportunity_details %}
-### {{ item.title }} | {{ item.company or item.source }}
+- 岗位方向：{{ best_fit_roles.role_family }}
+- 为什么匹配：{{ best_fit_roles.why_it_fits }}
+- 简历关键词：{{ best_fit_roles.keywords_to_add }}
+- 申请切入角度：{{ best_fit_roles.suggested_application_angle }}
 
-- 适合人群：{{ target_user_fit_zh(item) }}
-- 为什么重要：{{ item.fit_reason }}
-- 建议行动：{{ item.suggested_action }}
+## 本周值得关注公司
+
+| 公司 / 来源 | 信号 | 为什么重要 | 建议行动 |
+|---|---|---|---|
+{% for company in top_companies_to_watch %}
+| {{ company.company }} | {{ company.signal }} | {{ company.why_it_matters }} | {{ company.suggested_action }} |
+{% endfor %}
+
+## 建议打造的作品集项目
+
+### {{ portfolio_project.title }}
+
+- 目标用户：{{ portfolio_project.target_user }}
+- 解决的问题：{{ portfolio_project.problem_solved }}
+- MVP 范围：{{ portfolio_project.mvp_scope }}
+- 展示技能：{{ portfolio_project.skills_demonstrated }}
+- 建议下一步：{{ portfolio_project.suggested_next_step }}
+
+## 岗位机会
+
+{% for item in jobs %}
+### {{ item.role or item.title }} | {{ item.company or "Unknown" }}
+
+- 匹配原因：{{ item.fit_reason }}
+- 关键词：{{ item.keywords | join(", ") }}
 - 评分拆解：
   - 相关性：{{ "%.2f"|format(item.relevance_score) }}
   - 行动价值：{{ "%.2f"|format(item.actionability_score) }}
   - 新鲜度：{{ "%.2f"|format(item.freshness_score) }}
   - 可信度：{{ "%.2f"|format(item.credibility_score) }}
   - 独特性：{{ "%.2f"|format(item.uniqueness_score) }}
-
-{% endfor %}
-
-## 职位机会
-
-{% for item in jobs %}
-### {{ item.role or item.title }} | {{ item.company or "Unknown" }}
-
 - 适合人群：{{ target_user_fit_zh(item) }}
-- 匹配原因：{{ item.fit_reason }}
-- 关键词：{{ item.keywords | join(", ") }}
 - 建议行动：{{ item.suggested_action }}
 
 {% endfor %}
@@ -93,7 +114,7 @@ ZH_TEMPLATE = """# 新加坡 AI 与 FinTech 机会雷达 | {{ generated_at[:10] 
 
 {% endfor %}
 
-## 学习重点
+## 学习优先级
 
 {% for item in learning_priorities %}
 - 技能：{{ item.title }}
@@ -157,9 +178,12 @@ def _context_from_report(report: OpportunityReport) -> dict:
         "profile_name": report.profile,
         "generated_at": generated_at,
         "executive_summary": report.executive_summary,
+        "what_changed": report.what_changed,
         "this_week_focus": report.this_week_focus,
+        "best_fit_roles": report.best_fit_roles,
+        "top_companies_to_watch": report.top_companies_to_watch,
+        "portfolio_project": report.portfolio_project,
         "top_opportunities": report.top_opportunities,
-        "top_opportunity_details": report.top_opportunities[:5],
         "jobs": report.jobs,
         "events": report.events,
         "policy_signals": report.policy_signals,

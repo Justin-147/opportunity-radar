@@ -138,7 +138,7 @@ def default_suggested_action(item: OpportunityItem) -> str:
         "event": "Register for the event and prepare one question about AI governance, RegTech adoption, or Singapore FinTech hiring signals.",
         "policy": "Write a one-page analysis note that turns this policy signal into a portfolio project or interview talking point.",
         "project": "Build a small reproducible demo, document the decision workflow, and publish the README with synthetic data.",
-        "side_hustle": "Build a one-page landing page and validate demand with 10 target users before writing more code.",
+        "side_hustle": "Create a one-page landing page and validate demand with 10 target users before building more code.",
         "company_signal": "Track related roles, identify the repeated skill signals, and prepare a tailored portfolio story for this company type.",
         "learning": "Spend one week building a small dashboard or report automation project that demonstrates this skill.",
     }

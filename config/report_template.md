@@ -6,9 +6,16 @@
 - {{ line }}
 {% endfor %}
 
+## What Changed This Week
+
+{% for line in what_changed %}
+- {{ line }}
+{% endfor %}
+
 ## This Week Focus
 
 - Primary role family: {{ this_week_focus.primary_role_family }}
+- Best-fit roles this week: {{ this_week_focus.best_fit_roles }}
 - Best portfolio artifact to build: {{ this_week_focus.best_portfolio_artifact }}
 - Suggested networking action: {{ this_week_focus.suggested_networking_action }}
 
@@ -20,31 +27,45 @@
 | [{{ item.title }}]({{ item.url }}) | {{ item.category }} | {{ item.company or item.source }} | {{ "%.2f"|format(item.final_score) }} | {{ item.fit_reason }} | {{ item.suggested_action }} |
 {% endfor %}
 
-## Top Opportunity Details
+## Best-Fit Roles This Week
 
-{% for item in top_opportunity_details %}
-### {{ item.title }} | {{ item.company or item.source }}
+- Role family: {{ best_fit_roles.role_family }}
+- Why it fits: {{ best_fit_roles.why_it_fits }}
+- Keywords to add to resume: {{ best_fit_roles.keywords_to_add }}
+- Suggested application angle: {{ best_fit_roles.suggested_application_angle }}
 
-- Best for: {{ target_user_fit(item) }}
-- Why it matters: {{ item.fit_reason }}
-- Suggested action: {{ item.suggested_action }}
-- Score breakdown:
-  - Relevance: {{ "%.2f"|format(item.relevance_score) }}
-  - Actionability: {{ "%.2f"|format(item.actionability_score) }}
-  - Freshness: {{ "%.2f"|format(item.freshness_score) }}
-  - Credibility: {{ "%.2f"|format(item.credibility_score) }}
-  - Uniqueness: {{ "%.2f"|format(item.uniqueness_score) }}
+## Top Companies to Watch
 
+| Company / Source | Signal | Why It Matters | Suggested Action |
+|---|---|---|---|
+{% for company in top_companies_to_watch %}
+| {{ company.company }} | {{ company.signal }} | {{ company.why_it_matters }} | {{ company.suggested_action }} |
 {% endfor %}
+
+## Portfolio Project to Build
+
+### {{ portfolio_project.title }}
+
+- Target user: {{ portfolio_project.target_user }}
+- Problem solved: {{ portfolio_project.problem_solved }}
+- MVP scope: {{ portfolio_project.mvp_scope }}
+- Skills demonstrated: {{ portfolio_project.skills_demonstrated }}
+- Suggested next step: {{ portfolio_project.suggested_next_step }}
 
 ## Job Opportunities
 
 {% for item in jobs %}
 ### {{ item.role or item.title }} | {{ item.company or "Unknown" }}
 
-- Best for: {{ target_user_fit(item) }}
 - Why it fits: {{ item.fit_reason }}
 - Keywords: {{ item.keywords | join(", ") }}
+- Score breakdown:
+  - Relevance: {{ "%.2f"|format(item.relevance_score) }}
+  - Actionability: {{ "%.2f"|format(item.actionability_score) }}
+  - Freshness: {{ "%.2f"|format(item.freshness_score) }}
+  - Credibility: {{ "%.2f"|format(item.credibility_score) }}
+  - Uniqueness: {{ "%.2f"|format(item.uniqueness_score) }}
+- Best for: {{ target_user_fit(item) }}
 - Suggested action: {{ item.suggested_action }}
 
 {% endfor %}

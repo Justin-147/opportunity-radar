@@ -1,7 +1,7 @@
 {
   "id": "2026-07-06_singapore_ai_fintech",
   "profile": "singapore_ai_fintech",
-  "generated_at": "2026-07-06T11:00:12.301030",
+  "generated_at": "2026-07-06T13:40:42.893673",
   "title": "Singapore AI & FinTech Opportunity Radar | 2026-07-06",
   "executive_summary": [
     "Strongest signals this week cluster around event, job for the Singapore AI & FinTech Transition audience.",
@@ -9,10 +9,51 @@
     "The most portfolio-friendly direction is to convert policy, company, and job signals into small report automation or risk analytics artifacts.",
     "Recommended focus this week: pick one job family, one portfolio artifact, and one networking or event action."
   ],
+  "what_changed": [
+    "Hiring signals are strongest around AI Governance Analyst, Data Analyst, Risk Data Analyst.",
+    "Company watchlist activity points to Nimbus AI Systems, HarbourPay Analytics as useful signals to track.",
+    "Policy and ecosystem signals continue to favor AI governance, risk controls, and digital finance talent.",
+    "Portfolio-friendly opportunities cluster around AI controls, payments risk analytics, and report automation."
+  ],
   "this_week_focus": {
     "primary_role_family": "AI Governance / Risk Analytics",
+    "best_fit_roles": "AI Governance Analyst, Risk Data Analyst, RegTech Product Analyst, AI Application Engineer",
     "best_portfolio_artifact": "AI agent control checklist or risk intelligence dashboard",
     "suggested_networking_action": "register for one FinTech, RegTech, or AI governance event this week"
+  },
+  "best_fit_roles": {
+    "role_family": "AI Governance / Risk Analytics",
+    "why_it_fits": "This role family connects research, data analysis, Python, risk controls, and financial services transformation.",
+    "keywords_to_add": "AI governance, risk analytics, workflow automation, Python, dashboarding, compliance analytics",
+    "suggested_application_angle": "Position your background around translating complex signals into controls, dashboards, and decision-ready reports."
+  },
+  "top_companies_to_watch": [
+    {
+      "company": "Nimbus AI Systems",
+      "signal": "A synthetic AI startup signal points to enterprise agent evaluation, retrieval workflows, and governance tooling.",
+      "why_it_matters": "Strong fit for AI, AI Governance, AI Application Engineer because it connects market signal, skills, and a clear next action.",
+      "suggested_action": "Prepare an agent evaluation notebook and short technical memo."
+    },
+    {
+      "company": "HarbourPay Analytics",
+      "signal": "A synthetic FinTech signal points to growing needs in payments risk, fraud analytics, and case review tooling.",
+      "why_it_matters": "Strong fit for FinTech, Risk Analytics, Risk Analyst because it connects market signal, skills, and a clear next action.",
+      "suggested_action": "Prepare a payments risk analytics portfolio project."
+    },
+    {
+      "company": "Merlion Trust Bank",
+      "signal": "A synthetic bank signal indicates hiring for AI assistants, client analytics, and portfolio reporting workflows.",
+      "why_it_matters": "Strong fit for AI, Data Analytics, AI Application Engineer because it connects market signal, skills, and a clear next action.",
+      "suggested_action": "Build a wealth management insight dashboard case study."
+    }
+  ],
+  "portfolio_project": {
+    "title": "AI Agent Control Checklist or Risk Intelligence Dashboard",
+    "target_user": "AI governance analysts, risk analysts, and FinTech career transitioners",
+    "problem_solved": "Turns scattered AI governance and risk signals into a practical control or dashboard artifact.",
+    "mvp_scope": "A one-page control checklist plus a small Streamlit dashboard using synthetic risk and policy signals.",
+    "skills_demonstrated": "Python, data modeling, risk analytics, AI governance, reporting, and dashboarding",
+    "suggested_next_step": "Build the checklist first, then add one synthetic dashboard view and a short methodology note."
   },
   "top_opportunities": [
     {
@@ -1410,7 +1451,7 @@
       "url": "https://example.org/opportunity-radar/learning/2",
       "source": "Generated Learning Priorities",
       "source_type": "manual",
-      "published_at": "2026-07-06T11:00:12.301030",
+      "published_at": "2026-07-06T13:40:42.893673",
       "category": "learning",
       "location": "Remote",
       "company": null,
@@ -1450,7 +1491,7 @@
       "url": "https://example.org/opportunity-radar/learning/1",
       "source": "Generated Learning Priorities",
       "source_type": "manual",
-      "published_at": "2026-07-06T11:00:12.301030",
+      "published_at": "2026-07-06T13:40:42.893673",
       "category": "learning",
       "location": "Remote",
       "company": null,
@@ -1488,7 +1529,7 @@
       "url": "https://example.org/opportunity-radar/learning/3",
       "source": "Generated Learning Priorities",
       "source_type": "manual",
-      "published_at": "2026-07-06T11:00:12.301030",
+      "published_at": "2026-07-06T13:40:42.893673",
       "category": "learning",
       "location": "Remote",
       "company": null,
@@ -1526,7 +1567,7 @@
       "url": "https://example.org/opportunity-radar/learning/4",
       "source": "Generated Learning Priorities",
       "source_type": "manual",
-      "published_at": "2026-07-06T11:00:12.301030",
+      "published_at": "2026-07-06T13:40:42.893673",
       "category": "learning",
       "location": "Remote",
       "company": null,
@@ -1564,7 +1605,7 @@
       "url": "https://example.org/opportunity-radar/learning/5",
       "source": "Generated Learning Priorities",
       "source_type": "manual",
-      "published_at": "2026-07-06T11:00:12.301030",
+      "published_at": "2026-07-06T13:40:42.893673",
       "category": "learning",
       "location": "Remote",
       "company": null,

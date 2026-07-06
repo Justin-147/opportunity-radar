@@ -53,7 +53,11 @@ class OpportunityReport(BaseModel):
     generated_at: datetime
     title: str
     executive_summary: list[str] = Field(default_factory=list)
+    what_changed: list[str] = Field(default_factory=list)
     this_week_focus: dict[str, str] = Field(default_factory=dict)
+    best_fit_roles: dict[str, str] = Field(default_factory=dict)
+    top_companies_to_watch: list[dict[str, str]] = Field(default_factory=list)
+    portfolio_project: dict[str, str] = Field(default_factory=dict)
     top_opportunities: list[OpportunityItem] = Field(default_factory=list)
     jobs: list[OpportunityItem] = Field(default_factory=list)
     events: list[OpportunityItem] = Field(default_factory=list)
