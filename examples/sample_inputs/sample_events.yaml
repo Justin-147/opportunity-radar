@@ -1,0 +1,57 @@
+events:
+  - title: Singapore FinTech Risk Hackathon
+    company: Harbour Innovation Hub
+    location: Singapore
+    role: Data Analyst
+    category: event
+    source: Synthetic Events Calendar
+    source_type: event
+    url: https://example.org/opportunity-radar/events/fintech-risk-hackathon
+    published_at: 2026-07-01
+    summary: A weekend hackathon focused on fraud analytics, payment risk, and AI-assisted investigation workflows.
+    keywords: [FinTech, hackathon, risk analytics, fraud detection]
+    required_skills: [Python, data analysis, prototyping]
+    suggested_action: Register and prepare a payments risk dashboard idea.
+    source_notes: Synthetic event listing.
+  - title: AI Governance Webinar for Financial Services
+    company: Applied AI Governance Guild
+    location: Remote
+    role: AI Governance Analyst
+    category: event
+    source: Synthetic Events Calendar
+    source_type: event
+    url: https://example.org/opportunity-radar/events/ai-governance-webinar
+    published_at: 2026-06-29
+    summary: A webinar on AI control testing, policy documentation, and model monitoring practices for financial institutions.
+    keywords: [AI governance, webinar, model monitoring, compliance]
+    required_skills: [policy analysis, risk controls]
+    suggested_action: Register and extract three checklist items for a portfolio artifact.
+    source_notes: Synthetic event listing.
+  - title: Singapore Data Analytics Meetup
+    company: Data Builders SG
+    location: Singapore
+    role: Data Analyst
+    category: event
+    source: Synthetic Events Calendar
+    source_type: event
+    url: https://example.org/opportunity-radar/events/data-analytics-meetup
+    published_at: 2026-06-27
+    summary: A meetup featuring short talks on dashboard design, analytics storytelling, and career transition case studies.
+    keywords: [data analytics, meetup, dashboarding, career transition]
+    required_skills: [dashboarding, storytelling, SQL]
+    suggested_action: Attend and collect examples for a Singapore analytics portfolio.
+    source_notes: Synthetic event listing.
+  - title: RegTech Accelerator Application Deadline
+    company: RegTech Launchpad SG
+    location: Singapore
+    role: RegTech Product Analyst
+    category: event
+    source: Synthetic Events Calendar
+    source_type: event
+    url: https://example.org/opportunity-radar/events/regtech-accelerator-deadline
+    published_at: 2026-07-04
+    summary: Accelerator applications are open for compliance automation, monitoring, and financial crime analytics prototypes.
+    keywords: [RegTech, accelerator, compliance automation, financial crime]
+    required_skills: [product analysis, prototyping, compliance operations]
+    suggested_action: Submit a narrow RegTech workflow automation concept.
+    source_notes: Synthetic accelerator listing.

@@ -1,0 +1,21 @@
+weights:
+  relevance_score: 0.30
+  actionability_score: 0.25
+  freshness_score: 0.20
+  credibility_score: 0.15
+  uniqueness_score: 0.10
+
+source_credibility:
+  company_site: 0.90
+  policy: 0.95
+  event: 0.80
+  job_board: 0.75
+  news: 0.70
+  research: 0.80
+  community: 0.55
+  manual: 0.65
+
+freshness_days:
+  fresh: 14
+  recent: 45
+  stale: 120

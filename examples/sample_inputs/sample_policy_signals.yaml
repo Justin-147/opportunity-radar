@@ -1,0 +1,57 @@
+policy_signals:
+  - title: MAS-style AI agent safeguards discussion
+    company: Monetary Technology Forum
+    location: Singapore
+    role: AI Governance Analyst
+    category: policy
+    source: Synthetic Policy Monitor
+    source_type: policy
+    url: https://example.org/opportunity-radar/policy/ai-agent-safeguards
+    published_at: 2026-07-02
+    summary: A regulator-style discussion note highlights controls, testing, and human oversight for AI agents in financial services.
+    keywords: [AI governance, agent safeguards, financial services, risk management]
+    required_skills: [AI governance, risk controls, policy analysis]
+    suggested_action: Prepare a one-page AI agent control checklist and map it to a bank operations use case.
+    source_notes: Synthetic signal inspired by public policy themes, not a real regulatory notice.
+  - title: Financial AI governance initiative
+    company: Singapore Digital Finance Council
+    location: Singapore
+    role: AI Governance Analyst
+    category: policy
+    source: Synthetic Policy Monitor
+    source_type: policy
+    url: https://example.org/opportunity-radar/policy/financial-ai-governance-initiative
+    published_at: 2026-06-24
+    summary: An industry initiative proposes shared practices for model inventory, monitoring, and accountable AI adoption.
+    keywords: [financial AI, governance, model inventory, monitoring]
+    required_skills: [model governance, documentation, stakeholder communication]
+    suggested_action: Build a portfolio template for AI model inventory and monitoring evidence.
+    source_notes: Synthetic policy-style example.
+  - title: Tokenisation and real-world asset policy signal
+    company: Digital Assets Working Group
+    location: Singapore
+    role: Product Analyst
+    category: policy
+    source: Synthetic Policy Monitor
+    source_type: policy
+    url: https://example.org/opportunity-radar/policy/tokenisation-rwa-signal
+    published_at: 2026-06-17
+    summary: A policy roundtable indicates continued attention on tokenised funds, settlement workflows, and risk controls.
+    keywords: [tokenisation, RWA, digital assets, risk controls]
+    required_skills: [market research, product analysis, financial risk]
+    suggested_action: Create a simple market map of tokenisation use cases and risk analytics needs.
+    source_notes: Synthetic policy-style example.
+  - title: Digital finance talent program
+    company: Future Finance Skills Network
+    location: Singapore
+    role: Data Analyst
+    category: policy
+    source: Synthetic Policy Monitor
+    source_type: policy
+    url: https://example.org/opportunity-radar/policy/digital-finance-talent-program
+    published_at: 2026-07-03
+    summary: A talent program emphasizes applied analytics, AI governance, product thinking, and financial technology project work.
+    keywords: [digital finance, talent, analytics, AI governance]
+    required_skills: [Python, reporting, analytics, product thinking]
+    suggested_action: Align this week's learning plan with analytics and AI governance portfolio evidence.
+    source_notes: Synthetic workforce development signal.

@@ -1,0 +1,25 @@
+sources:
+  - name: Manual Job CSV
+    source_type: manual
+    enabled: true
+    path: examples/sample_inputs/singapore_ai_fintech_jobs.csv
+
+  - name: Manual Policy Signals
+    source_type: manual
+    enabled: true
+    path: examples/sample_inputs/sample_policy_signals.yaml
+
+  - name: Manual Events
+    source_type: manual
+    enabled: true
+    path: examples/sample_inputs/sample_events.yaml
+
+  - name: Manual Side Hustle Ideas
+    source_type: manual
+    enabled: true
+    path: examples/sample_inputs/sample_side_hustle_ideas.yaml
+
+  - name: Manual Company Signals
+    source_type: manual
+    enabled: true
+    path: examples/sample_inputs/sample_company_signals.yaml

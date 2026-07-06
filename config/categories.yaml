@@ -1,0 +1,15 @@
+categories:
+  job:
+    description: Job or internship opportunity.
+  event:
+    description: Hackathon, conference, accelerator, webinar, or networking event.
+  policy:
+    description: Government, regulator, or institutional policy signal.
+  project:
+    description: Portfolio project idea.
+  side_hustle:
+    description: Potential monetizable small service or product idea.
+  company_signal:
+    description: Company expansion, hiring, funding, product, or strategy signal.
+  learning:
+    description: Skill or topic worth learning based on market demand.

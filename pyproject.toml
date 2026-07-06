@@ -1,0 +1,31 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "opportunity-radar"
+version = "0.1.0"
+description = "Local-first Singapore AI and FinTech opportunity intelligence prototype."
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = [
+  "pydantic>=2.0",
+  "PyYAML>=6.0",
+  "pandas>=2.0",
+  "Jinja2>=3.1",
+  "markdown>=3.5",
+  "streamlit>=1.30",
+  "pytest>=8.0",
+  "python-dotenv>=1.0",
+]
+
+[project.scripts]
+opportunity-radar = "opportunity_radar.main:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+pythonpath = ["src"]
+testpaths = ["tests"]
+addopts = "-q"

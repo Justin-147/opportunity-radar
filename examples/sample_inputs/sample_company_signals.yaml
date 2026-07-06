@@ -1,0 +1,85 @@
+company_signals:
+  - title: Bank expanding AI wealth management team
+    company: Merlion Trust Bank
+    location: Singapore
+    role: AI Application Engineer
+    category: company_signal
+    source: Synthetic Company Watchlist
+    source_type: company_site
+    url: https://example.org/opportunity-radar/company/merlion-ai-wealth-team
+    published_at: 2026-07-02
+    summary: A synthetic bank signal indicates hiring for AI assistants, client analytics, and portfolio reporting workflows.
+    keywords: [AI wealth management, data analytics, reporting, financial services]
+    required_skills: [Python, analytics, financial data, AI applications]
+    suggested_action: Build a wealth management insight dashboard case study.
+    source_notes: Synthetic company signal for demo use.
+  - title: FinTech hiring risk analysts
+    company: HarbourPay Analytics
+    location: Singapore
+    role: Risk Analyst
+    category: company_signal
+    source: Synthetic Company Watchlist
+    source_type: company_site
+    url: https://example.org/opportunity-radar/company/harbourpay-risk-analysts
+    published_at: 2026-07-03
+    summary: A synthetic FinTech signal points to growing needs in payments risk, fraud analytics, and case review tooling.
+    keywords: [FinTech, risk analytics, payments, fraud]
+    required_skills: [SQL, Python, risk analysis, dashboarding]
+    suggested_action: Prepare a payments risk analytics portfolio project.
+    source_notes: Synthetic company signal for demo use.
+  - title: Consulting firm launching AI transformation practice
+    company: StraitsBridge Consulting
+    location: Singapore
+    role: Digital Transformation Consultant
+    category: company_signal
+    source: Synthetic Company Watchlist
+    source_type: company_site
+    url: https://example.org/opportunity-radar/company/straitsbridge-ai-practice
+    published_at: 2026-06-29
+    summary: A synthetic consulting signal suggests demand for AI workflow assessment, operating model design, and adoption metrics.
+    keywords: [digital transformation, consulting, AI adoption, workflow automation]
+    required_skills: [business analysis, process mapping, AI applications]
+    suggested_action: Write a one-page AI workflow assessment framework.
+    source_notes: Synthetic company signal for demo use.
+  - title: Payment company expanding compliance analytics
+    company: BlueQuay Payments
+    location: Singapore
+    role: Compliance Analytics Associate
+    category: company_signal
+    source: Synthetic Company Watchlist
+    source_type: company_site
+    url: https://example.org/opportunity-radar/company/bluequay-compliance-analytics
+    published_at: 2026-06-23
+    summary: A synthetic payments signal shows investment in compliance monitoring dashboards and alert prioritization.
+    keywords: [compliance analytics, payments, monitoring, risk]
+    required_skills: [SQL, dashboarding, compliance operations]
+    suggested_action: Build a sample alert triage dashboard with synthetic data.
+    source_notes: Synthetic company signal for demo use.
+  - title: AI startup building enterprise agent tools
+    company: Nimbus AI Systems
+    location: Singapore
+    role: AI Application Engineer
+    category: company_signal
+    source: Synthetic Company Watchlist
+    source_type: company_site
+    url: https://example.org/opportunity-radar/company/nimbus-agent-tools
+    published_at: 2026-07-01
+    summary: A synthetic AI startup signal points to enterprise agent evaluation, retrieval workflows, and governance tooling.
+    keywords: [AI agents, enterprise tools, governance, RAG]
+    required_skills: [Python, APIs, evaluation, AI governance]
+    suggested_action: Prepare an agent evaluation notebook and short technical memo.
+    source_notes: Synthetic company signal for demo use.
+  - title: AI infrastructure hiring signal
+    company: Equator Compute Exchange
+    location: Singapore
+    role: Data Analyst
+    category: company_signal
+    source: Synthetic Company Watchlist
+    source_type: company_site
+    url: https://example.org/opportunity-radar/company/ai-infrastructure-hiring
+    published_at: 2026-06-16
+    summary: A synthetic infrastructure signal indicates demand for capacity analytics, cost reporting, and customer operations data roles.
+    keywords: [AI infrastructure, data analytics, operations, reporting]
+    required_skills: [Python, SQL, reporting, operations analytics]
+    suggested_action: Track infrastructure analytics roles as an adjacent Singapore AI opportunity path.
+    source_notes: Synthetic company signal for demo use.

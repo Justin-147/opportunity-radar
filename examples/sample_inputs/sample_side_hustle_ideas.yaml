@@ -1,0 +1,91 @@
+side_hustle_ideas:
+  - title: AI-powered job opportunity brief
+    company: Independent builder
+    location: Remote
+    role: AI Application Engineer
+    category: side_hustle
+    source: Manual Idea Backlog
+    source_type: manual
+    url: https://example.org/opportunity-radar/ideas/ai-job-opportunity-brief
+    published_at: 2026-07-01
+    summary: A weekly curated brief that turns noisy job and policy signals into role-specific action plans.
+    keywords: [AI, job intelligence, reporting, automation]
+    target_audience: [career transitioners, data analysts, AI builders]
+    required_skills: [Python, reporting, opportunity scoring]
+    suggested_action: Build a manual-first issue for one audience segment and interview five readers.
+    source_notes: MVP is a Markdown newsletter generated from curated CSV and YAML inputs.
+  - title: Bilingual resume optimization service
+    company: Independent consultant
+    location: Remote
+    role: Business Analyst
+    category: side_hustle
+    source: Manual Idea Backlog
+    source_type: manual
+    url: https://example.org/opportunity-radar/ideas/bilingual-resume-optimization
+    published_at: 2026-06-26
+    summary: A Chinese-English resume and portfolio positioning service for Singapore AI, data, and FinTech roles.
+    keywords: [resume, bilingual, career transition, FinTech]
+    target_audience: [Chinese research professionals, engineers, data analysts]
+    required_skills: [writing, job analysis, analytics]
+    suggested_action: Create three anonymized before-and-after examples and a clear disclaimer.
+    source_notes: MVP is a fixed-scope document review package.
+  - title: Financial intelligence briefing agent
+    company: Independent builder
+    location: Remote
+    role: AI Application Engineer
+    category: side_hustle
+    source: Manual Idea Backlog
+    source_type: manual
+    url: https://example.org/opportunity-radar/ideas/financial-briefing-agent
+    published_at: 2026-06-30
+    summary: A local-first briefing workflow that summarizes public financial technology signals into analyst notes.
+    keywords: [financial intelligence, AI agent, briefing, analytics]
+    target_audience: [FinTech analysts, product researchers]
+    required_skills: [Python, summarization workflows, report generation]
+    suggested_action: Prototype with synthetic inputs before adding any public-source connectors.
+    source_notes: MVP is a CLI that converts curated links into a structured brief.
+  - title: AI governance checklist product
+    company: Independent builder
+    location: Remote
+    role: AI Governance Analyst
+    category: side_hustle
+    source: Manual Idea Backlog
+    source_type: manual
+    url: https://example.org/opportunity-radar/ideas/ai-governance-checklist
+    published_at: 2026-07-02
+    summary: A downloadable checklist and evidence tracker for small teams adopting AI assistants.
+    keywords: [AI governance, checklist, controls, risk]
+    target_audience: [SME operations teams, AI application builders]
+    required_skills: [AI governance, risk controls, documentation]
+    suggested_action: Draft a one-page checklist mapped to agent evaluation, escalation, and logging.
+    source_notes: MVP is a spreadsheet plus short implementation guide.
+  - title: Research-to-industry transition coaching
+    company: Independent consultant
+    location: Remote
+    role: Product Analyst
+    category: side_hustle
+    source: Manual Idea Backlog
+    source_type: manual
+    url: https://example.org/opportunity-radar/ideas/research-transition-coaching
+    published_at: 2026-06-22
+    summary: A structured coaching offer that turns research experience into business-facing analytics narratives.
+    keywords: [research transition, analytics, portfolio, coaching]
+    target_audience: [research professionals, engineers]
+    required_skills: [mentoring, portfolio design, business analysis]
+    suggested_action: Validate demand with a free workshop and collect recurring objections.
+    source_notes: MVP is a 90-minute workshop with a take-home portfolio plan.
+  - title: Sector-specific report automation templates
+    company: Independent builder
+    location: Remote
+    role: Data Analyst
+    category: side_hustle
+    source: Manual Idea Backlog
+    source_type: manual
+    url: https://example.org/opportunity-radar/ideas/report-automation-templates
+    published_at: 2026-06-19
+    summary: Reusable templates for turning manual research inputs into weekly sector opportunity reports.
+    keywords: [report automation, templates, analytics, workflow automation]
+    target_audience: [analysts, consultants, solo operators]
+    required_skills: [Jinja2, Markdown, data modeling, reporting]
+    suggested_action: Package the Opportunity Radar template into a reusable demo with three sectors.
+    source_notes: MVP is a template bundle with sample data and screenshots.

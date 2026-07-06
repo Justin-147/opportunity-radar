@@ -1,0 +1,49 @@
+profiles:
+  singapore_ai_fintech:
+    name: Singapore AI & FinTech Transition
+    description: Technical, research, data, or engineering professionals exploring Singapore AI, FinTech, RegTech, risk analytics, and digital transformation roles.
+    target_locations:
+      - Singapore
+      - Remote
+    target_domains:
+      - AI
+      - FinTech
+      - RegTech
+      - Risk Analytics
+      - Data Analytics
+      - Digital Transformation
+      - AI Governance
+    target_roles:
+      - AI Application Engineer
+      - Data Analyst
+      - Risk Analyst
+      - Product Analyst
+      - Business Analyst
+      - RegTech Analyst
+      - Digital Transformation Consultant
+      - AI Governance Analyst
+    core_skills:
+      - Python
+      - data analysis
+      - risk modeling
+      - AI applications
+      - workflow automation
+      - reporting
+      - dashboarding
+    transition_keywords:
+      - AI
+      - fintech
+      - risk
+      - governance
+      - compliance
+      - analytics
+      - automation
+      - agent
+      - digital transformation
+    avoid_keywords:
+      - sales only
+      - cold calling
+      - unrelated retail
+      - gambling
+      - adult
+      - high leverage trading
