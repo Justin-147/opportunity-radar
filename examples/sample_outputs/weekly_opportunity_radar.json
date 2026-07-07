@@ -33,19 +33,19 @@
     {
       "company": "Nimbus AI Systems",
       "signal": "A synthetic AI startup signal points to enterprise agent evaluation, retrieval workflows, and governance tooling.",
-      "why_it_matters": "Relevant signal because it matches AI, AI Application Engineer, Python and can support a focused next action or portfolio story.",
+      "why_it_matters": "Company watchlist signal from Nimbus AI Systems: it points to role preparation around AI Application Engineer, AI, and Python.",
       "suggested_action": "Prepare an agent evaluation notebook and short technical memo."
     },
     {
       "company": "HarbourPay Analytics",
       "signal": "A synthetic FinTech signal points to growing needs in payments risk, fraud analytics, and case review tooling.",
-      "why_it_matters": "Relevant signal because it matches FinTech, Risk Analyst, Python, dashboarding and can support a focused next action or portfolio story.",
+      "why_it_matters": "Company watchlist signal from HarbourPay Analytics: it points to role preparation around Risk Analyst, FinTech, and Python, dashboarding.",
       "suggested_action": "Prepare a payments risk analytics portfolio project."
     },
     {
       "company": "Merlion Trust Bank",
       "signal": "A synthetic bank signal indicates hiring for AI assistants, client analytics, and portfolio reporting workflows.",
-      "why_it_matters": "Relevant signal because it matches AI, AI Application Engineer, Python, AI applications and can support a focused next action or portfolio story.",
+      "why_it_matters": "Company watchlist signal from Merlion Trust Bank: it points to role preparation around AI Application Engineer, AI, and Python, AI applications, reporting.",
       "suggested_action": "Build a wealth management insight dashboard case study."
     }
   ],
@@ -130,7 +130,7 @@
       "credibility_score": 0.8,
       "uniqueness_score": 0.76,
       "final_score": 0.946,
-      "fit_reason": "Relevant signal because it matches AI, Data Analyst, Python, data analysis and can support a focused next action or portfolio story.",
+      "fit_reason": "Useful networking signal for AI: it can reveal hiring language, ecosystem priorities, and practical Python, data analysis examples.",
       "suggested_action": "Register and prepare a payments risk dashboard idea.",
       "source_notes": "Synthetic event listing."
     },
@@ -204,7 +204,7 @@
       "credibility_score": 0.8,
       "uniqueness_score": 0.92,
       "final_score": 0.922,
-      "fit_reason": "Relevant signal because it matches AI, AI Governance Analyst and can support a focused next action or portfolio story.",
+      "fit_reason": "Useful networking signal for AI: it can reveal hiring language, ecosystem priorities, and practical policy analysis, risk controls examples.",
       "suggested_action": "Register and extract three checklist items for a portfolio artifact.",
       "source_notes": "Synthetic event listing."
     },
@@ -282,7 +282,7 @@
       "credibility_score": 0.9,
       "uniqueness_score": 0.98,
       "final_score": 0.9045,
-      "fit_reason": "Relevant signal because it matches AI, AI Application Engineer, Python and can support a focused next action or portfolio story.",
+      "fit_reason": "Company watchlist signal from Nimbus AI Systems: it points to role preparation around AI Application Engineer, AI, and Python.",
       "suggested_action": "Prepare an agent evaluation notebook and short technical memo.",
       "source_notes": "Synthetic company signal for demo use."
     },
@@ -320,7 +320,7 @@
       "credibility_score": 0.9,
       "uniqueness_score": 0.98,
       "final_score": 0.8995,
-      "fit_reason": "Relevant signal because it matches FinTech, Risk Analyst, Python, dashboarding and can support a focused next action or portfolio story.",
+      "fit_reason": "Company watchlist signal from HarbourPay Analytics: it points to role preparation around Risk Analyst, FinTech, and Python, dashboarding.",
       "suggested_action": "Prepare a payments risk analytics portfolio project.",
       "source_notes": "Synthetic company signal for demo use."
     },
@@ -358,7 +358,7 @@
       "credibility_score": 0.9,
       "uniqueness_score": 0.98,
       "final_score": 0.8935,
-      "fit_reason": "Relevant signal because it matches AI, AI Application Engineer, Python, AI applications and can support a focused next action or portfolio story.",
+      "fit_reason": "Company watchlist signal from Merlion Trust Bank: it points to role preparation around AI Application Engineer, AI, and Python, AI applications, reporting.",
       "suggested_action": "Build a wealth management insight dashboard case study.",
       "source_notes": "Synthetic company signal for demo use."
     },
@@ -786,7 +786,7 @@
       "credibility_score": 0.8,
       "uniqueness_score": 0.76,
       "final_score": 0.946,
-      "fit_reason": "Relevant signal because it matches AI, Data Analyst, Python, data analysis and can support a focused next action or portfolio story.",
+      "fit_reason": "Useful networking signal for AI: it can reveal hiring language, ecosystem priorities, and practical Python, data analysis examples.",
       "suggested_action": "Register and prepare a payments risk dashboard idea.",
       "source_notes": "Synthetic event listing."
     },
@@ -822,7 +822,7 @@
       "credibility_score": 0.8,
       "uniqueness_score": 0.92,
       "final_score": 0.922,
-      "fit_reason": "Relevant signal because it matches AI, AI Governance Analyst and can support a focused next action or portfolio story.",
+      "fit_reason": "Useful networking signal for AI: it can reveal hiring language, ecosystem priorities, and practical policy analysis, risk controls examples.",
       "suggested_action": "Register and extract three checklist items for a portfolio artifact.",
       "source_notes": "Synthetic event listing."
     },
@@ -859,7 +859,7 @@
       "credibility_score": 0.8,
       "uniqueness_score": 0.76,
       "final_score": 0.849,
-      "fit_reason": "Relevant signal because it matches RegTech, Product Analyst and can support a focused next action or portfolio story.",
+      "fit_reason": "Useful networking signal for RegTech: it can reveal hiring language, ecosystem priorities, and practical product analysis, prototyping, compliance operations examples.",
       "suggested_action": "Submit a narrow RegTech workflow automation concept.",
       "source_notes": "Synthetic accelerator listing."
     },
@@ -896,7 +896,7 @@
       "credibility_score": 0.8,
       "uniqueness_score": 0.92,
       "final_score": 0.838,
-      "fit_reason": "Relevant signal because it matches Data Analytics, Data Analyst, dashboarding and can support a focused next action or portfolio story.",
+      "fit_reason": "Useful networking signal for Data Analytics: it can reveal hiring language, ecosystem priorities, and practical dashboarding examples.",
       "suggested_action": "Attend and collect examples for a Singapore analytics portfolio.",
       "source_notes": "Synthetic event listing."
     }
@@ -1293,7 +1293,7 @@
       "credibility_score": 0.9,
       "uniqueness_score": 0.98,
       "final_score": 0.9045,
-      "fit_reason": "Relevant signal because it matches AI, AI Application Engineer, Python and can support a focused next action or portfolio story.",
+      "fit_reason": "Company watchlist signal from Nimbus AI Systems: it points to role preparation around AI Application Engineer, AI, and Python.",
       "suggested_action": "Prepare an agent evaluation notebook and short technical memo.",
       "source_notes": "Synthetic company signal for demo use."
     },
@@ -1331,7 +1331,7 @@
       "credibility_score": 0.9,
       "uniqueness_score": 0.98,
       "final_score": 0.8995,
-      "fit_reason": "Relevant signal because it matches FinTech, Risk Analyst, Python, dashboarding and can support a focused next action or portfolio story.",
+      "fit_reason": "Company watchlist signal from HarbourPay Analytics: it points to role preparation around Risk Analyst, FinTech, and Python, dashboarding.",
       "suggested_action": "Prepare a payments risk analytics portfolio project.",
       "source_notes": "Synthetic company signal for demo use."
     },
@@ -1369,7 +1369,7 @@
       "credibility_score": 0.9,
       "uniqueness_score": 0.98,
       "final_score": 0.8935,
-      "fit_reason": "Relevant signal because it matches AI, AI Application Engineer, Python, AI applications and can support a focused next action or portfolio story.",
+      "fit_reason": "Company watchlist signal from Merlion Trust Bank: it points to role preparation around AI Application Engineer, AI, and Python, AI applications, reporting.",
       "suggested_action": "Build a wealth management insight dashboard case study.",
       "source_notes": "Synthetic company signal for demo use."
     },
@@ -1406,7 +1406,7 @@
       "credibility_score": 0.9,
       "uniqueness_score": 0.98,
       "final_score": 0.8795,
-      "fit_reason": "Relevant signal because it matches AI, Digital Transformation Consultant, AI applications, workflow automation and can support a focused next action or portfolio story.",
+      "fit_reason": "Company watchlist signal from StraitsBridge Consulting: it points to role preparation around Digital Transformation Consultant, AI, and AI applications, workflow automation.",
       "suggested_action": "Write a one-page AI workflow assessment framework.",
       "source_notes": "Synthetic company signal for demo use."
     },
@@ -1444,7 +1444,7 @@
       "credibility_score": 0.9,
       "uniqueness_score": 0.98,
       "final_score": 0.8345,
-      "fit_reason": "Relevant signal because it matches AI, Data Analyst, Python, reporting and can support a focused next action or portfolio story.",
+      "fit_reason": "Company watchlist signal from Equator Compute Exchange: it points to role preparation around Data Analyst, AI, and Python, reporting.",
       "suggested_action": "Track infrastructure analytics roles as an adjacent Singapore AI opportunity path.",
       "source_notes": "Synthetic company signal for demo use."
     }
@@ -1486,7 +1486,7 @@
       "credibility_score": 0.65,
       "uniqueness_score": 0.84,
       "final_score": 0.7635,
-      "fit_reason": "Relevant signal because it matches Risk Analytics, Python, dashboarding and can support a focused next action or portfolio story.",
+      "fit_reason": "Useful learning focus for the target role: it strengthens Python, dashboarding evidence that can be shown in a portfolio artifact.",
       "suggested_action": "Use a tutorial or synthetic dataset and publish one dashboard screenshot.",
       "source_notes": "Generated from the target audience profile and top opportunity themes."
     },
@@ -1524,7 +1524,7 @@
       "credibility_score": 0.65,
       "uniqueness_score": 0.68,
       "final_score": 0.7545,
-      "fit_reason": "Relevant signal because it matches AI and can support a focused next action or portfolio story.",
+      "fit_reason": "Useful learning focus for the target role: it strengthens AI governance, controls, model monitoring evidence that can be shown in a portfolio artifact.",
       "suggested_action": "Complete one regulator-style checklist and attach it to a portfolio case study.",
       "source_notes": "Generated from the target audience profile and top opportunity themes."
     },
@@ -1562,7 +1562,7 @@
       "credibility_score": 0.65,
       "uniqueness_score": 0.68,
       "final_score": 0.6615,
-      "fit_reason": "Useful learning focus because it supports the target Singapore AI and FinTech transition profile.",
+      "fit_reason": "Useful learning focus for the target role: it strengthens tokenisation, product analytics, digital assets evidence that can be shown in a portfolio artifact.",
       "suggested_action": "Read one product analytics guide and draft a metric tree for a tokenisation MVP.",
       "source_notes": "Generated from the target audience profile and top opportunity themes."
     },
@@ -1600,7 +1600,7 @@
       "credibility_score": 0.65,
       "uniqueness_score": 0.68,
       "final_score": 0.6495,
-      "fit_reason": "Relevant signal because it matches reporting, dashboarding and can support a focused next action or portfolio story.",
+      "fit_reason": "Useful learning focus for the target role: it strengthens reporting, dashboarding evidence that can be shown in a portfolio artifact.",
       "suggested_action": "Add filters, score tables, and Markdown previews to a local Streamlit app.",
       "source_notes": "Generated from the target audience profile and top opportunity themes."
     },
@@ -1638,7 +1638,7 @@
       "credibility_score": 0.65,
       "uniqueness_score": 0.68,
       "final_score": 0.6405,
-      "fit_reason": "Useful learning focus because it supports the target Singapore AI and FinTech transition profile.",
+      "fit_reason": "Useful learning focus for the target role: it strengthens Jinja2, Markdown, report automation evidence that can be shown in a portfolio artifact.",
       "suggested_action": "Create one reusable report template and generate English and Chinese outputs.",
       "source_notes": "Generated from the target audience profile and top opportunity themes."
     }

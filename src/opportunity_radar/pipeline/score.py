@@ -158,22 +158,33 @@ def default_fit_reason(item: OpportunityItem, profile: AudienceProfile) -> str:
             f"Useful policy signal for {domain}: it can be turned into a methodology note, "
             "checklist, or portfolio-ready analysis artifact."
         )
+    if item.category == "event":
+        return (
+            f"Useful networking signal for {domain}: it can reveal hiring language, "
+            f"ecosystem priorities, and practical {skills_text} examples."
+        )
     if item.category == "side_hustle":
         audience = ", ".join(item.target_audience[:2]) or profile.name
         return (
             f"Promising manual-first MVP angle for {audience}, especially where {skills_text} "
             "can produce a concrete weekly deliverable."
         )
+    if item.category == "company_signal":
+        company = item.company or item.source
+        return (
+            f"Company watchlist signal from {company}: it points to role preparation around "
+            f"{role}, {domain}, and {skills_text}."
+        )
+    if item.category == "learning":
+        return (
+            f"Useful learning focus for {role}: it strengthens {skills_text} evidence "
+            "that can be shown in a portfolio artifact."
+        )
     if matched_roles or matched_domains or matched_skills:
         matched_terms = matched_domains[:1] + matched_roles[:1] + matched_skills[:2]
         return (
             f"Relevant signal because it matches {', '.join(matched_terms)} and can support "
             "a focused next action or portfolio story."
-        )
-    if item.category == "learning":
-        return (
-            "Useful learning focus because it supports the target Singapore AI "
-            "and FinTech transition profile."
         )
     return (
         "Relevant but exploratory signal for tracking Singapore AI, FinTech, RegTech, "

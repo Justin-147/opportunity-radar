@@ -28,13 +28,13 @@
 | 机会 | 类别 | 公司 / 来源 | 分数 | 为什么重要 | 建议行动 |
 |---|---|---|---:|---|---|
 | [AI Governance Analyst](https://example.org/opportunity-radar/jobs/ai-governance-analyst) | job | Merlion Trust Bank | 0.95 | Good job-fit signal for AI Governance Analyst at Merlion Trust Bank: it combines Python, reporting with Singapore or remote relevance. | Tailor one resume bullet for AI Governance Analyst and apply through the source link. |
-| [Singapore FinTech Risk Hackathon](https://example.org/opportunity-radar/events/fintech-risk-hackathon) | event | Harbour Innovation Hub | 0.95 | Relevant signal because it matches AI, Data Analyst, Python, data analysis and can support a focused next action or portfolio story. | Register and prepare a payments risk dashboard idea. |
+| [Singapore FinTech Risk Hackathon](https://example.org/opportunity-radar/events/fintech-risk-hackathon) | event | Harbour Innovation Hub | 0.95 | Useful networking signal for AI: it can reveal hiring language, ecosystem priorities, and practical Python, data analysis examples. | Register and prepare a payments risk dashboard idea. |
 | [Data Analyst, Payments Risk](https://example.org/opportunity-radar/jobs/data-analyst-payments-risk) | job | KopiPay Network | 0.93 | Good job-fit signal for Data Analyst at KopiPay Network: it combines Python, dashboarding with Singapore or remote relevance. | Prepare a merchant risk analytics dashboard and apply through the source link. |
-| [AI Governance Webinar for Financial Services](https://example.org/opportunity-radar/events/ai-governance-webinar) | event | Applied AI Governance Guild | 0.92 | Relevant signal because it matches AI, AI Governance Analyst and can support a focused next action or portfolio story. | Register and extract three checklist items for a portfolio artifact. |
+| [AI Governance Webinar for Financial Services](https://example.org/opportunity-radar/events/ai-governance-webinar) | event | Applied AI Governance Guild | 0.92 | Useful networking signal for AI: it can reveal hiring language, ecosystem priorities, and practical policy analysis, risk controls examples. | Register and extract three checklist items for a portfolio artifact. |
 | [Risk Data Analyst](https://example.org/opportunity-radar/jobs/risk-data-analyst) | job | HarbourPay Analytics | 0.91 | Good job-fit signal for Data Analyst at HarbourPay Analytics: it combines Python, dashboarding with Singapore or remote relevance. | Prepare a payments risk dashboard story and apply through the source link. |
-| [AI startup building enterprise agent tools](https://example.org/opportunity-radar/company/nimbus-agent-tools) | company_signal | Nimbus AI Systems | 0.90 | Relevant signal because it matches AI, AI Application Engineer, Python and can support a focused next action or portfolio story. | Prepare an agent evaluation notebook and short technical memo. |
-| [FinTech hiring risk analysts](https://example.org/opportunity-radar/company/harbourpay-risk-analysts) | company_signal | HarbourPay Analytics | 0.90 | Relevant signal because it matches FinTech, Risk Analyst, Python, dashboarding and can support a focused next action or portfolio story. | Prepare a payments risk analytics portfolio project. |
-| [Bank expanding AI wealth management team](https://example.org/opportunity-radar/company/merlion-ai-wealth-team) | company_signal | Merlion Trust Bank | 0.89 | Relevant signal because it matches AI, AI Application Engineer, Python, AI applications and can support a focused next action or portfolio story. | Build a wealth management insight dashboard case study. |
+| [AI startup building enterprise agent tools](https://example.org/opportunity-radar/company/nimbus-agent-tools) | company_signal | Nimbus AI Systems | 0.90 | Company watchlist signal from Nimbus AI Systems: it points to role preparation around AI Application Engineer, AI, and Python. | Prepare an agent evaluation notebook and short technical memo. |
+| [FinTech hiring risk analysts](https://example.org/opportunity-radar/company/harbourpay-risk-analysts) | company_signal | HarbourPay Analytics | 0.90 | Company watchlist signal from HarbourPay Analytics: it points to role preparation around Risk Analyst, FinTech, and Python, dashboarding. | Prepare a payments risk analytics portfolio project. |
+| [Bank expanding AI wealth management team](https://example.org/opportunity-radar/company/merlion-ai-wealth-team) | company_signal | Merlion Trust Bank | 0.89 | Company watchlist signal from Merlion Trust Bank: it points to role preparation around AI Application Engineer, AI, and Python, AI applications, reporting. | Build a wealth management insight dashboard case study. |
 | [Digital finance talent program](https://example.org/opportunity-radar/policy/digital-finance-talent-program) | policy | Future Finance Skills Network | 0.89 | Useful policy signal for AI: it can be turned into a methodology note, checklist, or portfolio-ready analysis artifact. | Align this week's learning plan with analytics and AI governance portfolio evidence. |
 | [Digital Transformation Consultant](https://example.org/opportunity-radar/jobs/digital-transformation-consultant) | job | StraitsBridge Consulting | 0.89 | Good job-fit signal for Digital Transformation Consultant at StraitsBridge Consulting: it combines Python, workflow automation with Singapore or remote relevance. | Map one AI workflow case study and apply through the source link. |
 
@@ -49,9 +49,9 @@
 
 | 公司 / 来源 | 信号 | 为什么重要 | 建议行动 |
 |---|---|---|---|
-| Nimbus AI Systems | A synthetic AI startup signal points to enterprise agent evaluation, retrieval workflows, and governance tooling. | Relevant signal because it matches AI, AI Application Engineer, Python and can support a focused next action or portfolio story. | Prepare an agent evaluation notebook and short technical memo. |
-| HarbourPay Analytics | A synthetic FinTech signal points to growing needs in payments risk, fraud analytics, and case review tooling. | Relevant signal because it matches FinTech, Risk Analyst, Python, dashboarding and can support a focused next action or portfolio story. | Prepare a payments risk analytics portfolio project. |
-| Merlion Trust Bank | A synthetic bank signal indicates hiring for AI assistants, client analytics, and portfolio reporting workflows. | Relevant signal because it matches AI, AI Application Engineer, Python, AI applications and can support a focused next action or portfolio story. | Build a wealth management insight dashboard case study. |
+| Nimbus AI Systems | A synthetic AI startup signal points to enterprise agent evaluation, retrieval workflows, and governance tooling. | Company watchlist signal from Nimbus AI Systems: it points to role preparation around AI Application Engineer, AI, and Python. | Prepare an agent evaluation notebook and short technical memo. |
+| HarbourPay Analytics | A synthetic FinTech signal points to growing needs in payments risk, fraud analytics, and case review tooling. | Company watchlist signal from HarbourPay Analytics: it points to role preparation around Risk Analyst, FinTech, and Python, dashboarding. | Prepare a payments risk analytics portfolio project. |
+| Merlion Trust Bank | A synthetic bank signal indicates hiring for AI assistants, client analytics, and portfolio reporting workflows. | Company watchlist signal from Merlion Trust Bank: it points to role preparation around AI Application Engineer, AI, and Python, AI applications, reporting. | Build a wealth management insight dashboard case study. |
 
 ## 建议打造的作品集项目
 
@@ -202,31 +202,31 @@
 ### Nimbus AI Systems / AI startup building enterprise agent tools
 
 - 信号：A synthetic AI startup signal points to enterprise agent evaluation, retrieval workflows, and governance tooling.
-- 为什么重要：Relevant signal because it matches AI, AI Application Engineer, Python and can support a focused next action or portfolio story.
+- 为什么重要：Company watchlist signal from Nimbus AI Systems: it points to role preparation around AI Application Engineer, AI, and Python.
 - 建议行动：Prepare an agent evaluation notebook and short technical memo.
 
 ### HarbourPay Analytics / FinTech hiring risk analysts
 
 - 信号：A synthetic FinTech signal points to growing needs in payments risk, fraud analytics, and case review tooling.
-- 为什么重要：Relevant signal because it matches FinTech, Risk Analyst, Python, dashboarding and can support a focused next action or portfolio story.
+- 为什么重要：Company watchlist signal from HarbourPay Analytics: it points to role preparation around Risk Analyst, FinTech, and Python, dashboarding.
 - 建议行动：Prepare a payments risk analytics portfolio project.
 
 ### Merlion Trust Bank / Bank expanding AI wealth management team
 
 - 信号：A synthetic bank signal indicates hiring for AI assistants, client analytics, and portfolio reporting workflows.
-- 为什么重要：Relevant signal because it matches AI, AI Application Engineer, Python, AI applications and can support a focused next action or portfolio story.
+- 为什么重要：Company watchlist signal from Merlion Trust Bank: it points to role preparation around AI Application Engineer, AI, and Python, AI applications, reporting.
 - 建议行动：Build a wealth management insight dashboard case study.
 
 ### StraitsBridge Consulting / Consulting firm launching AI transformation practice
 
 - 信号：A synthetic consulting signal suggests demand for AI workflow assessment, operating model design, and adoption metrics.
-- 为什么重要：Relevant signal because it matches AI, Digital Transformation Consultant, AI applications, workflow automation and can support a focused next action or portfolio story.
+- 为什么重要：Company watchlist signal from StraitsBridge Consulting: it points to role preparation around Digital Transformation Consultant, AI, and AI applications, workflow automation.
 - 建议行动：Write a one-page AI workflow assessment framework.
 
 ### Equator Compute Exchange / AI infrastructure hiring signal
 
 - 信号：A synthetic infrastructure signal indicates demand for capacity analytics, cost reporting, and customer operations data roles.
-- 为什么重要：Relevant signal because it matches AI, Data Analyst, Python, reporting and can support a focused next action or portfolio story.
+- 为什么重要：Company watchlist signal from Equator Compute Exchange: it points to role preparation around Data Analyst, AI, and Python, reporting.
 - 建议行动：Track infrastructure analytics roles as an adjacent Singapore AI opportunity path.
 
 

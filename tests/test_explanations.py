@@ -46,8 +46,14 @@ def test_default_fit_reasons_are_category_specific():
     profile = load_profile("singapore_ai_fintech")
     reasons = {
         default_fit_reason(make_item("job"), profile),
+        default_fit_reason(make_item("event", "AI governance webinar"), profile),
         default_fit_reason(make_item("policy"), profile),
         default_fit_reason(make_item("side_hustle"), profile),
+        default_fit_reason(make_item("company_signal", "Bank AI hiring signal"), profile),
+        default_fit_reason(make_item("learning", "AI governance control testing"), profile),
     }
 
-    assert len(reasons) == 3
+    assert len(reasons) == 6
+    assert any("networking signal" in reason for reason in reasons)
+    assert any("Company watchlist signal" in reason for reason in reasons)
+    assert any("learning focus" in reason for reason in reasons)
