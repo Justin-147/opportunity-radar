@@ -1,11 +1,9 @@
 from __future__ import annotations
 
-import json
 import sys
 from pathlib import Path
 from typing import Any
 
-import pandas as pd
 import streamlit as st
 
 PROJECT_ROOT = Path(__file__).resolve().parents[3]
@@ -14,88 +12,14 @@ if str(SRC_ROOT) not in sys.path:
     sys.path.insert(0, str(SRC_ROOT))
 
 from opportunity_radar.config import load_audience_profiles  # noqa: E402
-
-
-def load_reports() -> list[Path]:
-    search_dirs = [
-        PROJECT_ROOT / "data" / "processed",
-        PROJECT_ROOT / "reports" / "json",
-        PROJECT_ROOT / "examples" / "sample_outputs",
-    ]
-    reports: list[Path] = []
-    seen: set[Path] = set()
-    for directory in search_dirs:
-        for path in sorted(directory.glob("*.json"), reverse=True):
-            if path not in seen:
-                reports.append(path)
-                seen.add(path)
-    return reports
-
-
-def load_report(path: Path) -> dict:
-    with path.open("r", encoding="utf-8") as handle:
-        return json.load(handle)
-
-
-def item_frame(items: list[dict[str, Any]]) -> pd.DataFrame:
-    rows = []
-    for item in items:
-        keywords = item.get("keywords") or []
-        if isinstance(keywords, list):
-            keyword_text = ", ".join(str(keyword) for keyword in keywords)
-        else:
-            keyword_text = str(keywords)
-        rows.append(
-            {
-                "title": item.get("title"),
-                "category": item.get("category"),
-                "company": item.get("company") or item.get("source"),
-                "score": item.get("final_score"),
-                "location": item.get("location"),
-                "summary": item.get("summary"),
-                "keywords": keyword_text,
-                "action": item.get("suggested_action"),
-                "url": item.get("url"),
-            }
-        )
-    return pd.DataFrame(rows)
-
-
-def markdown_path_for(report_path: Path, language: str) -> Path:
-    stem = report_path.stem
-    if "examples" in report_path.parts and "sample_outputs" in report_path.parts:
-        return PROJECT_ROOT / "examples" / "sample_reports" / f"{stem}_{language}.md"
-    return PROJECT_ROOT / "reports" / "markdown" / f"{stem}_{language}.md"
-
-
-def filter_frame(
-    frame: pd.DataFrame,
-    categories: list[str] | None = None,
-    min_score: float = 0.0,
-    keyword: str = "",
-) -> pd.DataFrame:
-    if frame.empty:
-        return frame
-
-    filtered = frame.copy()
-    if categories:
-        filtered = filtered[filtered["category"].isin(categories)]
-    filtered = filtered[pd.to_numeric(filtered["score"], errors="coerce").fillna(0.0) >= min_score]
-
-    query = keyword.strip().lower()
-    if query:
-        search_columns = ["title", "category", "company", "summary", "keywords"]
-        mask = (
-            filtered[search_columns]
-            .fillna("")
-            .astype(str)
-            .apply(
-                lambda row: query in " ".join(row).lower(),
-                axis=1,
-            )
-        )
-        filtered = filtered[mask]
-    return filtered
+from opportunity_radar.dashboard.helpers import (  # noqa: E402
+    category_options,
+    discover_report_paths,
+    filter_frame,
+    item_frame,
+    load_report,
+    markdown_path_for,
+)
 
 
 def link_column_config() -> dict[str, Any] | None:
@@ -105,7 +29,7 @@ def link_column_config() -> dict[str, Any] | None:
         return None
 
 
-def show_frame(frame: pd.DataFrame) -> None:
+def show_frame(frame: Any) -> None:
     column_config = link_column_config()
     if column_config:
         st.dataframe(frame, use_container_width=True, column_config=column_config)
@@ -122,7 +46,7 @@ def main() -> None:
     selected_profile = st.sidebar.selectbox("Profile", profile_ids)
     st.sidebar.caption(profiles[selected_profile].description)
 
-    reports = load_reports()
+    reports = discover_report_paths(PROJECT_ROOT)
     if not reports:
         st.info(
             "No generated or sample reports found. Run "
@@ -146,9 +70,7 @@ def main() -> None:
         + report.get("learning_priorities", [])
     )
     frame = item_frame(items).drop_duplicates(subset=["title", "category"])
-    categories = sorted(
-        value for value in frame.get("category", pd.Series(dtype=str)).dropna().unique()
-    )
+    categories = category_options(frame)
     selected_categories = st.sidebar.multiselect("Category", categories, default=categories)
     min_score = st.sidebar.slider("Minimum score", 0.0, 1.0, 0.0, 0.05)
     keyword = st.sidebar.text_input("Search")
@@ -208,7 +130,7 @@ def main() -> None:
     )
 
     st.subheader("Markdown report preview")
-    markdown_path = markdown_path_for(report_path, language)
+    markdown_path = markdown_path_for(report_path, language, PROJECT_ROOT)
     if markdown_path.exists():
         st.markdown(markdown_path.read_text(encoding="utf-8"))
     else:

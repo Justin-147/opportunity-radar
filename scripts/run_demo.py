@@ -34,7 +34,9 @@ def main() -> int:
             "singapore_ai_fintech",
             "--mock",
             "--as-of",
-            "2026-07-06T09:00:00",
+            "2026-07-06",
+            "--output-root",
+            ".tmp/demo",
         ],
         [python, "scripts/verify_line_endings.py"],
     ]

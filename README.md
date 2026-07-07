@@ -84,7 +84,7 @@ manual CSV/YAML inputs
 cd opportunity-radar
 python -m pip install -e .[dev]
 python -m opportunity_radar.main validate --input-dir examples/sample_inputs
-python -m opportunity_radar.main generate --profile singapore_ai_fintech --mock --as-of 2026-07-06T09:00:00
+python -m opportunity_radar.main generate --profile singapore_ai_fintech --mock --as-of 2026-07-06
 ```
 
 Without installing the package, run:
@@ -117,19 +117,25 @@ python -m opportunity_radar.main generate --profile singapore_ai_fintech --input
 Generate with a fixed report date:
 
 ```powershell
-python -m opportunity_radar.main generate --profile singapore_ai_fintech --mock --as-of 2026-07-06T09:00:00
+python -m opportunity_radar.main generate --profile singapore_ai_fintech --mock --as-of 2026-07-06
 ```
 
 Generate into an isolated output directory:
 
 ```powershell
-python -m opportunity_radar.main generate --profile singapore_ai_fintech --mock --as-of 2026-07-06T09:00:00 --output-root .tmp/opportunity-radar-output
+python -m opportunity_radar.main generate --profile singapore_ai_fintech --mock --as-of 2026-07-06 --output-root .tmp/opportunity-radar-output
+```
+
+Generate with strict validation:
+
+```powershell
+python -m opportunity_radar.main generate --profile singapore_ai_fintech --input-dir examples/sample_inputs --strict-validation --as-of 2026-07-06 --output-root .tmp/validated-output
 ```
 
 Generate and refresh stable examples:
 
 ```powershell
-python -m opportunity_radar.main generate --profile singapore_ai_fintech --mock --as-of 2026-07-06T09:00:00 --copy-samples
+python -m opportunity_radar.main generate --profile singapore_ai_fintech --mock --as-of 2026-07-06 --copy-samples
 ```
 
 Expected outputs:
@@ -262,7 +268,7 @@ python -m compileall src tests scripts
 mypy src/opportunity_radar
 pytest
 python -m opportunity_radar.main validate --input-dir examples/sample_inputs
-python -m opportunity_radar.main generate --profile singapore_ai_fintech --mock --as-of 2026-07-06T09:00:00 --output-root .tmp/final-check
+python -m opportunity_radar.main generate --profile singapore_ai_fintech --mock --as-of 2026-07-06 --output-root .tmp/final-check
 python scripts/verify_line_endings.py
 ```
 

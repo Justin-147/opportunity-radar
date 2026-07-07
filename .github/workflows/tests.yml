@@ -40,7 +40,7 @@ jobs:
         run: python -m opportunity_radar.main validate --input-dir examples/sample_inputs
 
       - name: CLI smoke test
-        run: python -m opportunity_radar.main generate --profile singapore_ai_fintech --mock --as-of 2026-07-06T09:00:00 --output-root .tmp/ci-output
+        run: python -m opportunity_radar.main generate --profile singapore_ai_fintech --mock --as-of 2026-07-06 --output-root .tmp/ci-output
 
       - name: Verify line endings
         run: python scripts/verify_line_endings.py
