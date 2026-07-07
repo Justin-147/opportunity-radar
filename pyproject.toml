@@ -53,5 +53,6 @@ line-ending = "lf"
 [tool.mypy]
 python_version = "3.11"
 ignore_missing_imports = true
+no_site_packages = true
 warn_unused_configs = true
 strict = false
