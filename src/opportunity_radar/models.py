@@ -52,6 +52,8 @@ class OpportunityReport(BaseModel):
     profile: str
     generated_at: datetime
     title: str
+    data_notice: str = ""
+    methodology_note: str = ""
     executive_summary: list[str] = Field(default_factory=list)
     what_changed: list[str] = Field(default_factory=list)
     this_week_focus: dict[str, str] = Field(default_factory=dict)

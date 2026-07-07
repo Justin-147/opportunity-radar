@@ -7,18 +7,43 @@ on:
     branches: [main]
 
 jobs:
-  pytest:
+  test:
     runs-on: ubuntu-latest
+
+    strategy:
+      matrix:
+        python-version: ["3.11", "3.12"]
 
     steps:
       - uses: actions/checkout@v4
 
       - uses: actions/setup-python@v5
         with:
-          python-version: "3.11"
+          python-version: ${{ matrix.python-version }}
 
       - name: Install package
-        run: pip install -e .[dev]
+        run: python -m pip install -e .[dev]
 
-      - name: Run tests
+      - name: Ruff
+        run: ruff check .
+
+      - name: Compile
+        run: python -m compileall src tests scripts
+
+      - name: Mypy
+        run: mypy src/opportunity_radar
+
+      - name: Pytest
         run: pytest
+
+      - name: Validate sample inputs
+        run: python -m opportunity_radar.main validate --input-dir examples/sample_inputs
+
+      - name: CLI smoke test
+        run: python -m opportunity_radar.main generate --profile singapore_ai_fintech --mock --as-of 2026-07-06T09:00:00 --output-root .tmp/ci-output
+
+      - name: Verify line endings
+        run: python scripts/verify_line_endings.py
+
+      - name: Build package
+        run: python -m build

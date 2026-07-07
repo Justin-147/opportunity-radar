@@ -1,6 +1,7 @@
 from __future__ import annotations
 
-from datetime import datetime, timezone
+import re
+from datetime import UTC, datetime
 from typing import Any
 
 from opportunity_radar.models import AudienceProfile, OpportunityItem
@@ -15,7 +16,7 @@ def _copy_item(item: OpportunityItem, **updates: Any) -> OpportunityItem:
 def _naive_utc(value: datetime) -> datetime:
     if value.tzinfo is None:
         return value
-    return value.astimezone(timezone.utc).replace(tzinfo=None)
+    return value.astimezone(UTC).replace(tzinfo=None)
 
 
 def _item_text(item: OpportunityItem) -> str:
@@ -31,8 +32,24 @@ def _item_text(item: OpportunityItem) -> str:
     return " ".join(parts).lower()
 
 
+def term_in_text(term: str, text: str) -> bool:
+    normalized_term = term.strip().lower()
+    if not normalized_term:
+        return False
+
+    normalized_text = text.lower()
+    if " " in normalized_term:
+        pattern = rf"(?<!\w){re.escape(normalized_term)}(?!\w)"
+        return re.search(pattern, normalized_text, flags=re.IGNORECASE) is not None
+    if len(normalized_term) <= 3 and normalized_term.isascii():
+        pattern = rf"(?<![a-zA-Z0-9]){re.escape(normalized_term)}(?![a-zA-Z0-9])"
+        return re.search(pattern, text, flags=re.IGNORECASE) is not None
+    return normalized_term in normalized_text
+
+
 def _count_hits(text: str, terms: list[str]) -> int:
-    return sum(1 for term in terms if term.lower() in text)
+    seen_terms = {term.strip().lower() for term in terms if term.strip()}
+    return sum(1 for term in seen_terms if term_in_text(term, text))
 
 
 def _clamp(value: float) -> float:
@@ -87,7 +104,7 @@ def calculate_freshness_score(
     fresh_days = int(thresholds.get("fresh", 14))
     recent_days = int(thresholds.get("recent", 45))
     stale_days = int(thresholds.get("stale", 120))
-    reference = _naive_utc(now or datetime.now(timezone.utc))
+    reference = _naive_utc(now or datetime.now(UTC))
     published = _naive_utc(item.published_at)
     age_days = max(0, (reference.date() - published.date()).days)
 
@@ -122,25 +139,78 @@ def calculate_uniqueness_score(item: OpportunityItem) -> float:
 
 def default_fit_reason(item: OpportunityItem, profile: AudienceProfile) -> str:
     text = _item_text(item)
-    matched_domains = [term for term in profile.target_domains if term.lower() in text]
-    matched_roles = [term for term in profile.target_roles if term.lower() in text]
-    matched_terms = matched_domains[:2] + matched_roles[:1]
-    if matched_terms:
-        return f"Strong fit for {', '.join(matched_terms)} because it connects market signal, skills, and a clear next action."
+    matched_domains = [term for term in profile.target_domains if term_in_text(term, text)]
+    matched_roles = [term for term in profile.target_roles if term_in_text(term, text)]
+    matched_skills = [term for term in profile.core_skills if term_in_text(term, text)]
+    skills = matched_skills[:3] or item.required_skills[:3] or item.keywords[:3]
+    skills_text = ", ".join(skills) if skills else "the profile's core skills"
+    role = matched_roles[0] if matched_roles else item.role or "the target role"
+    domain = matched_domains[0] if matched_domains else "the Singapore opportunity market"
+
+    if item.category == "job":
+        company_text = f" at {item.company}" if item.company else ""
+        return (
+            f"Good job-fit signal for {role}{company_text}: it combines {skills_text} "
+            f"with Singapore or remote relevance."
+        )
+    if item.category == "policy":
+        return (
+            f"Useful policy signal for {domain}: it can be turned into a methodology note, "
+            "checklist, or portfolio-ready analysis artifact."
+        )
+    if item.category == "side_hustle":
+        audience = ", ".join(item.target_audience[:2]) or profile.name
+        return (
+            f"Promising manual-first MVP angle for {audience}, especially where {skills_text} "
+            "can produce a concrete weekly deliverable."
+        )
+    if matched_roles or matched_domains or matched_skills:
+        matched_terms = matched_domains[:1] + matched_roles[:1] + matched_skills[:2]
+        return (
+            f"Relevant signal because it matches {', '.join(matched_terms)} and can support "
+            "a focused next action or portfolio story."
+        )
     if item.category == "learning":
-        return "Useful learning focus because it supports the target Singapore AI and FinTech transition profile."
-    return "Relevant signal for tracking Singapore AI, FinTech, RegTech, analytics, or digital transformation opportunities."
+        return (
+            "Useful learning focus because it supports the target Singapore AI "
+            "and FinTech transition profile."
+        )
+    return (
+        "Relevant but exploratory signal for tracking Singapore AI, FinTech, RegTech, "
+        "analytics, or digital transformation opportunities."
+    )
 
 
 def default_suggested_action(item: OpportunityItem) -> str:
+    skills = item.required_skills[:3] or item.keywords[:3]
+    skills_text = ", ".join(skills) if skills else "the strongest matching skills"
+    role_or_company = item.role or item.company or item.title
     defaults = {
-        "job": "Update your resume with AI governance, risk analytics, and workflow automation evidence, then apply through the company careers page.",
-        "event": "Register for the event and prepare one question about AI governance, RegTech adoption, or Singapore FinTech hiring signals.",
-        "policy": "Write a one-page analysis note that turns this policy signal into a portfolio project or interview talking point.",
-        "project": "Build a small reproducible demo, document the decision workflow, and publish the README with synthetic data.",
-        "side_hustle": "Create a one-page landing page and validate demand with 10 target users before building more code.",
-        "company_signal": "Track related roles, identify the repeated skill signals, and prepare a tailored portfolio story for this company type.",
-        "learning": "Spend one week building a small dashboard or report automation project that demonstrates this skill.",
+        "job": (
+            f"Tailor one resume bullet for {role_or_company}, emphasizing {skills_text}, "
+            "then apply through the source link."
+        ),
+        "event": (
+            "Register, prepare one question, and convert the event notes into a short "
+            "portfolio memo."
+        ),
+        "policy": "Turn this signal into a one-page methodology note or checklist.",
+        "project": (
+            "Build a small reproducible demo, document the decision workflow, "
+            "and publish the README with synthetic data."
+        ),
+        "side_hustle": (
+            "Create a one-page offer, validate with 5 target users, and keep the first "
+            "version manual-first."
+        ),
+        "company_signal": (
+            "Track related roles, identify the repeated skill signals, and prepare "
+            "a tailored portfolio story for this company type."
+        ),
+        "learning": (
+            "Spend one week building a small dashboard or report automation project "
+            "that demonstrates this skill."
+        ),
     }
     return defaults.get(item.category, "Review the signal and decide one concrete next step.")
 

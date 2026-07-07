@@ -2,7 +2,7 @@ from __future__ import annotations
 
 import hashlib
 import re
-from datetime import date, datetime, time
+from datetime import UTC, date, datetime, time
 from typing import Any
 
 from opportunity_radar.models import OpportunityItem
@@ -32,20 +32,24 @@ def parse_list(value: Any) -> list[str]:
 
 def parse_datetime(value: Any) -> datetime:
     if isinstance(value, datetime):
+        if value.tzinfo is not None:
+            return value.astimezone(UTC).replace(tzinfo=None)
         return value
     if isinstance(value, date):
         return datetime.combine(value, time.min)
     text = clean_value(value)
     if not text:
-        return datetime.utcnow()
-    normalized = text.replace("Z", "+00:00")
+        return datetime.now(UTC).replace(tzinfo=None)
+    normalized = text[:-1] + "+00:00" if text.endswith("Z") else text
     try:
         parsed = datetime.fromisoformat(normalized)
-    except ValueError:
-        parsed_date = datetime.strptime(text[:10], "%Y-%m-%d")
-        return parsed_date
+    except ValueError as exc:
+        try:
+            return datetime.strptime(text[:10], "%Y-%m-%d")
+        except ValueError:
+            raise ValueError(f"Invalid datetime value: {text}") from exc
     if parsed.tzinfo is not None:
-        return parsed.replace(tzinfo=None)
+        return parsed.astimezone(UTC).replace(tzinfo=None)
     return parsed
 
 

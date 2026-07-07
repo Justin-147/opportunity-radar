@@ -2,7 +2,6 @@ from pathlib import Path
 
 from opportunity_radar.pipeline.import_manual import load_csv, load_yaml_records
 
-
 PROJECT_ROOT = Path(__file__).resolve().parents[1]
 
 

@@ -1,5 +1,7 @@
 # Singapore AI & FinTech Opportunity Radar | 2026-07-06
 
+> Data notice: Demo reports use synthetic, Singapore-focused sample signals. Replace sample inputs with curated public or manual sources before using for real decisions.
+
 ## Executive Summary
 
 - Strongest signals this week cluster around event, job for the Singapore AI & FinTech Transition audience.
@@ -25,16 +27,16 @@
 
 | Opportunity | Category | Company / Source | Score | Why It Matters | Suggested Action |
 |---|---|---|---:|---|---|
-| [Singapore FinTech Risk Hackathon](https://example.org/opportunity-radar/events/fintech-risk-hackathon) | event | Harbour Innovation Hub | 0.95 | Strong fit for AI, FinTech, Data Analyst because it connects market signal, skills, and a clear next action. | Register and prepare a payments risk dashboard idea. |
-| [AI Governance Webinar for Financial Services](https://example.org/opportunity-radar/events/ai-governance-webinar) | event | Applied AI Governance Guild | 0.92 | Strong fit for AI, AI Governance, AI Governance Analyst because it connects market signal, skills, and a clear next action. | Register and extract three checklist items for a portfolio artifact. |
-| [AI Governance Analyst](https://example.org/opportunity-radar/jobs/ai-governance-analyst) | job | Merlion Trust Bank | 0.91 | Strong fit for AI, AI Governance, AI Governance Analyst because it connects market signal, skills, and a clear next action. | Update your resume with AI governance, risk analytics, and workflow automation evidence, then apply through the company careers page. |
-| [AI startup building enterprise agent tools](https://example.org/opportunity-radar/company/nimbus-agent-tools) | company_signal | Nimbus AI Systems | 0.90 | Strong fit for AI, AI Governance, AI Application Engineer because it connects market signal, skills, and a clear next action. | Prepare an agent evaluation notebook and short technical memo. |
-| [FinTech hiring risk analysts](https://example.org/opportunity-radar/company/harbourpay-risk-analysts) | company_signal | HarbourPay Analytics | 0.90 | Strong fit for FinTech, Risk Analytics, Risk Analyst because it connects market signal, skills, and a clear next action. | Prepare a payments risk analytics portfolio project. |
-| [Bank expanding AI wealth management team](https://example.org/opportunity-radar/company/merlion-ai-wealth-team) | company_signal | Merlion Trust Bank | 0.89 | Strong fit for AI, Data Analytics, AI Application Engineer because it connects market signal, skills, and a clear next action. | Build a wealth management insight dashboard case study. |
-| [Digital finance talent program](https://example.org/opportunity-radar/policy/digital-finance-talent-program) | policy | Future Finance Skills Network | 0.89 | Strong fit for AI, AI Governance, Data Analyst because it connects market signal, skills, and a clear next action. | Align this week's learning plan with analytics and AI governance portfolio evidence. |
-| [MAS-style AI agent safeguards discussion](https://example.org/opportunity-radar/policy/ai-agent-safeguards) | policy | Monetary Technology Forum | 0.88 | Strong fit for AI, AI Governance, AI Governance Analyst because it connects market signal, skills, and a clear next action. | Prepare a one-page AI agent control checklist and map it to a bank operations use case. |
-| [Consulting firm launching AI transformation practice](https://example.org/opportunity-radar/company/straitsbridge-ai-practice) | company_signal | StraitsBridge Consulting | 0.88 | Strong fit for AI, Digital Transformation, Digital Transformation Consultant because it connects market signal, skills, and a clear next action. | Write a one-page AI workflow assessment framework. |
-| [AI governance checklist product](https://example.org/opportunity-radar/ideas/ai-governance-checklist) | side_hustle | Independent builder | 0.87 | Strong fit for AI, AI Governance, AI Governance Analyst because it connects market signal, skills, and a clear next action. | Draft a one-page checklist mapped to agent evaluation, escalation, and logging. |
+| [Singapore FinTech Risk Hackathon](https://example.org/opportunity-radar/events/fintech-risk-hackathon) | event | Harbour Innovation Hub | 0.95 | Relevant signal because it matches AI, Data Analyst, Python, data analysis and can support a focused next action or portfolio story. | Register and prepare a payments risk dashboard idea. |
+| [AI Governance Webinar for Financial Services](https://example.org/opportunity-radar/events/ai-governance-webinar) | event | Applied AI Governance Guild | 0.92 | Relevant signal because it matches AI, AI Governance Analyst and can support a focused next action or portfolio story. | Register and extract three checklist items for a portfolio artifact. |
+| [AI Governance Analyst](https://example.org/opportunity-radar/jobs/ai-governance-analyst) | job | Merlion Trust Bank | 0.91 | Good job-fit signal for AI Governance Analyst at Merlion Trust Bank: it combines Python, reporting with Singapore or remote relevance. | Tailor one resume bullet for AI Governance Analyst, emphasizing Python, policy analysis, risk management, then apply through the source link. |
+| [AI startup building enterprise agent tools](https://example.org/opportunity-radar/company/nimbus-agent-tools) | company_signal | Nimbus AI Systems | 0.90 | Relevant signal because it matches AI, AI Application Engineer, Python and can support a focused next action or portfolio story. | Prepare an agent evaluation notebook and short technical memo. |
+| [FinTech hiring risk analysts](https://example.org/opportunity-radar/company/harbourpay-risk-analysts) | company_signal | HarbourPay Analytics | 0.90 | Relevant signal because it matches FinTech, Risk Analyst, Python, dashboarding and can support a focused next action or portfolio story. | Prepare a payments risk analytics portfolio project. |
+| [Bank expanding AI wealth management team](https://example.org/opportunity-radar/company/merlion-ai-wealth-team) | company_signal | Merlion Trust Bank | 0.89 | Relevant signal because it matches AI, AI Application Engineer, Python, AI applications and can support a focused next action or portfolio story. | Build a wealth management insight dashboard case study. |
+| [Digital finance talent program](https://example.org/opportunity-radar/policy/digital-finance-talent-program) | policy | Future Finance Skills Network | 0.89 | Useful policy signal for AI: it can be turned into a methodology note, checklist, or portfolio-ready analysis artifact. | Align this week's learning plan with analytics and AI governance portfolio evidence. |
+| [MAS-style AI agent safeguards discussion](https://example.org/opportunity-radar/policy/ai-agent-safeguards) | policy | Monetary Technology Forum | 0.88 | Useful policy signal for AI: it can be turned into a methodology note, checklist, or portfolio-ready analysis artifact. | Prepare a one-page AI agent control checklist and map it to a bank operations use case. |
+| [Consulting firm launching AI transformation practice](https://example.org/opportunity-radar/company/straitsbridge-ai-practice) | company_signal | StraitsBridge Consulting | 0.88 | Relevant signal because it matches AI, Digital Transformation Consultant, AI applications, workflow automation and can support a focused next action or portfolio story. | Write a one-page AI workflow assessment framework. |
+| [AI governance checklist product](https://example.org/opportunity-radar/ideas/ai-governance-checklist) | side_hustle | Independent builder | 0.87 | Promising manual-first MVP angle for SME operations teams, AI application builders, especially where AI governance, risk controls, documentation can produce a concrete weekly deliverable. | Draft a one-page checklist mapped to agent evaluation, escalation, and logging. |
 
 ## Best-Fit Roles This Week
 
@@ -47,9 +49,9 @@
 
 | Company / Source | Signal | Why It Matters | Suggested Action |
 |---|---|---|---|
-| Nimbus AI Systems | A synthetic AI startup signal points to enterprise agent evaluation, retrieval workflows, and governance tooling. | Strong fit for AI, AI Governance, AI Application Engineer because it connects market signal, skills, and a clear next action. | Prepare an agent evaluation notebook and short technical memo. |
-| HarbourPay Analytics | A synthetic FinTech signal points to growing needs in payments risk, fraud analytics, and case review tooling. | Strong fit for FinTech, Risk Analytics, Risk Analyst because it connects market signal, skills, and a clear next action. | Prepare a payments risk analytics portfolio project. |
-| Merlion Trust Bank | A synthetic bank signal indicates hiring for AI assistants, client analytics, and portfolio reporting workflows. | Strong fit for AI, Data Analytics, AI Application Engineer because it connects market signal, skills, and a clear next action. | Build a wealth management insight dashboard case study. |
+| Nimbus AI Systems | A synthetic AI startup signal points to enterprise agent evaluation, retrieval workflows, and governance tooling. | Relevant signal because it matches AI, AI Application Engineer, Python and can support a focused next action or portfolio story. | Prepare an agent evaluation notebook and short technical memo. |
+| HarbourPay Analytics | A synthetic FinTech signal points to growing needs in payments risk, fraud analytics, and case review tooling. | Relevant signal because it matches FinTech, Risk Analyst, Python, dashboarding and can support a focused next action or portfolio story. | Prepare a payments risk analytics portfolio project. |
+| Merlion Trust Bank | A synthetic bank signal indicates hiring for AI assistants, client analytics, and portfolio reporting workflows. | Relevant signal because it matches AI, AI Application Engineer, Python, AI applications and can support a focused next action or portfolio story. | Build a wealth management insight dashboard case study. |
 
 ## Portfolio Project to Build
 
@@ -65,7 +67,7 @@
 
 ### AI Governance Analyst | Merlion Trust Bank
 
-- Why it fits: Strong fit for AI, AI Governance, AI Governance Analyst because it connects market signal, skills, and a clear next action.
+- Why it fits: Good job-fit signal for AI Governance Analyst at Merlion Trust Bank: it combines Python, reporting with Singapore or remote relevance.
 - Keywords: AI governance, risk, compliance, model controls, reporting
 - Score breakdown:
   - Relevance: 1.00
@@ -74,11 +76,11 @@
   - Credibility: 0.75
   - Uniqueness: 0.84
 - Best for: candidates with Python, policy analysis, risk management, stakeholder communication experience
-- Suggested action: Update your resume with AI governance, risk analytics, and workflow automation evidence, then apply through the company careers page.
+- Suggested action: Tailor one resume bullet for AI Governance Analyst, emphasizing Python, policy analysis, risk management, then apply through the source link.
 
 ### Data Analyst | KopiPay Network
 
-- Why it fits: Strong fit for AI, FinTech, Data Analyst because it connects market signal, skills, and a clear next action.
+- Why it fits: Good job-fit signal for Data Analyst at KopiPay Network: it combines Python, dashboarding with Singapore or remote relevance.
 - Keywords: payments risk, data analytics, FinTech, fraud detection
 - Score breakdown:
   - Relevance: 1.00
@@ -87,11 +89,11 @@
   - Credibility: 0.75
   - Uniqueness: 0.68
 - Best for: candidates with SQL, Python, dashboarding, risk analysis experience
-- Suggested action: Update your resume with AI governance, risk analytics, and workflow automation evidence, then apply through the company careers page.
+- Suggested action: Tailor one resume bullet for Data Analyst, emphasizing SQL, Python, dashboarding, then apply through the source link.
 
 ### Risk Data Analyst | HarbourPay Analytics
 
-- Why it fits: Strong fit for FinTech, Risk Analytics, Data Analyst because it connects market signal, skills, and a clear next action.
+- Why it fits: Good job-fit signal for Data Analyst at HarbourPay Analytics: it combines Python, dashboarding with Singapore or remote relevance.
 - Keywords: FinTech, risk analytics, payments, dashboarding, anomaly detection
 - Score breakdown:
   - Relevance: 0.93
@@ -100,24 +102,11 @@
   - Credibility: 0.75
   - Uniqueness: 0.68
 - Best for: candidates with SQL, Python, pandas, data visualization experience
-- Suggested action: Update your resume with AI governance, risk analytics, and workflow automation evidence, then apply through the company careers page.
-
-### RegTech Product Analyst | LionCity RegTech Labs
-
-- Why it fits: Strong fit for AI, RegTech, Product Analyst because it connects market signal, skills, and a clear next action.
-- Keywords: RegTech, compliance, product analytics, workflow automation
-- Score breakdown:
-  - Relevance: 0.95
-  - Actionability: 0.76
-  - Freshness: 1.00
-  - Credibility: 0.75
-  - Uniqueness: 0.68
-- Best for: candidates with product analysis, SQL, compliance operations, user research experience
-- Suggested action: Update your resume with AI governance, risk analytics, and workflow automation evidence, then apply through the company careers page.
+- Suggested action: Tailor one resume bullet for Risk Data Analyst, emphasizing SQL, Python, pandas, then apply through the source link.
 
 ### Digital Transformation Consultant | StraitsBridge Consulting
 
-- Why it fits: Strong fit for AI, Digital Transformation, Digital Transformation Consultant because it connects market signal, skills, and a clear next action.
+- Why it fits: Good job-fit signal for Digital Transformation Consultant at StraitsBridge Consulting: it combines Python, workflow automation with Singapore or remote relevance.
 - Keywords: digital transformation, AI, consulting, automation, process design
 - Score breakdown:
   - Relevance: 0.93
@@ -126,11 +115,11 @@
   - Credibility: 0.75
   - Uniqueness: 0.68
 - Best for: candidates with business analysis, Python, workflow mapping, stakeholder management experience
-- Suggested action: Update your resume with AI governance, risk analytics, and workflow automation evidence, then apply through the company careers page.
+- Suggested action: Tailor one resume bullet for Digital Transformation Consultant, emphasizing business analysis, Python, workflow mapping, then apply through the source link.
 
 ### AI Application Engineer | Nimbus AI Systems
 
-- Why it fits: Strong fit for AI, AI Application Engineer because it connects market signal, skills, and a clear next action.
+- Why it fits: Good job-fit signal for AI Application Engineer at Nimbus AI Systems: it combines Python, AI applications with Singapore or remote relevance.
 - Keywords: AI applications, agents, RAG, automation, Python
 - Score breakdown:
   - Relevance: 0.81
@@ -139,11 +128,11 @@
   - Credibility: 0.75
   - Uniqueness: 0.68
 - Best for: candidates with Python, APIs, prompt engineering, evaluation experience
-- Suggested action: Update your resume with AI governance, risk analytics, and workflow automation evidence, then apply through the company careers page.
+- Suggested action: Tailor one resume bullet for AI Application Engineer, emphasizing Python, APIs, prompt engineering, then apply through the source link.
 
 ### Data Analyst | Orchid Private Wealth
 
-- Why it fits: Strong fit for FinTech, Data Analytics, Data Analyst because it connects market signal, skills, and a clear next action.
+- Why it fits: Good job-fit signal for Data Analyst at Orchid Private Wealth: it combines Python, data analysis, reporting with Singapore or remote relevance.
 - Keywords: wealth management, data analytics, reporting, FinTech
 - Score breakdown:
   - Relevance: 0.91
@@ -152,11 +141,24 @@
   - Credibility: 0.75
   - Uniqueness: 0.68
 - Best for: candidates with SQL, Python, BI, financial data analysis experience
-- Suggested action: Update your resume with AI governance, risk analytics, and workflow automation evidence, then apply through the company careers page.
+- Suggested action: Tailor one resume bullet for Data Analyst, emphasizing SQL, Python, BI, then apply through the source link.
+
+### RegTech Product Analyst | LionCity RegTech Labs
+
+- Why it fits: Good job-fit signal for Product Analyst at LionCity RegTech Labs: it combines workflow automation with Singapore or remote relevance.
+- Keywords: RegTech, compliance, product analytics, workflow automation
+- Score breakdown:
+  - Relevance: 0.76
+  - Actionability: 0.76
+  - Freshness: 1.00
+  - Credibility: 0.75
+  - Uniqueness: 0.68
+- Best for: candidates with product analysis, SQL, compliance operations, user research experience
+- Suggested action: Tailor one resume bullet for RegTech Product Analyst, emphasizing product analysis, SQL, compliance operations, then apply through the source link.
 
 ### Research Analyst | CivicTech Policy Institute
 
-- Why it fits: Strong fit for AI, AI Governance because it connects market signal, skills, and a clear next action.
+- Why it fits: Good job-fit signal for Research Analyst at CivicTech Policy Institute: it combines data analysis with Singapore or remote relevance.
 - Keywords: AI policy, governance, research, digital finance
 - Score breakdown:
   - Relevance: 0.66
@@ -165,7 +167,7 @@
   - Credibility: 0.75
   - Uniqueness: 0.68
 - Best for: candidates with policy research, writing, data analysis, stakeholder interviews experience
-- Suggested action: Update your resume with AI governance, risk analytics, and workflow automation evidence, then apply through the company careers page.
+- Suggested action: Tailor one resume bullet for Research Analyst, emphasizing policy research, writing, data analysis, then apply through the source link.
 
 
 ## Policy / Ecosystem Signals
@@ -173,25 +175,25 @@
 ### Digital finance talent program
 
 - Fact: A talent program emphasizes applied analytics, AI governance, product thinking, and financial technology project work.
-- Why it matters: Strong fit for AI, AI Governance, Data Analyst because it connects market signal, skills, and a clear next action.
+- Why it matters: Useful policy signal for AI: it can be turned into a methodology note, checklist, or portfolio-ready analysis artifact.
 - Career / project implication: Align this week's learning plan with analytics and AI governance portfolio evidence.
 
 ### MAS-style AI agent safeguards discussion
 
 - Fact: A regulator-style discussion note highlights controls, testing, and human oversight for AI agents in financial services.
-- Why it matters: Strong fit for AI, AI Governance, AI Governance Analyst because it connects market signal, skills, and a clear next action.
+- Why it matters: Useful policy signal for AI: it can be turned into a methodology note, checklist, or portfolio-ready analysis artifact.
 - Career / project implication: Prepare a one-page AI agent control checklist and map it to a bank operations use case.
 
 ### Financial AI governance initiative
 
 - Fact: An industry initiative proposes shared practices for model inventory, monitoring, and accountable AI adoption.
-- Why it matters: Strong fit for AI, AI Governance, AI Governance Analyst because it connects market signal, skills, and a clear next action.
+- Why it matters: Useful policy signal for AI: it can be turned into a methodology note, checklist, or portfolio-ready analysis artifact.
 - Career / project implication: Build a portfolio template for AI model inventory and monitoring evidence.
 
 ### Tokenisation and real-world asset policy signal
 
 - Fact: A policy roundtable indicates continued attention on tokenised funds, settlement workflows, and risk controls.
-- Why it matters: Strong fit for Product Analyst because it connects market signal, skills, and a clear next action.
+- Why it matters: Useful policy signal for the Singapore opportunity market: it can be turned into a methodology note, checklist, or portfolio-ready analysis artifact.
 - Career / project implication: Create a simple market map of tokenisation use cases and risk analytics needs.
 
 
@@ -200,31 +202,31 @@
 ### Nimbus AI Systems / AI startup building enterprise agent tools
 
 - Signal: A synthetic AI startup signal points to enterprise agent evaluation, retrieval workflows, and governance tooling.
-- Why it matters: Strong fit for AI, AI Governance, AI Application Engineer because it connects market signal, skills, and a clear next action.
+- Why it matters: Relevant signal because it matches AI, AI Application Engineer, Python and can support a focused next action or portfolio story.
 - Suggested action: Prepare an agent evaluation notebook and short technical memo.
 
 ### HarbourPay Analytics / FinTech hiring risk analysts
 
 - Signal: A synthetic FinTech signal points to growing needs in payments risk, fraud analytics, and case review tooling.
-- Why it matters: Strong fit for FinTech, Risk Analytics, Risk Analyst because it connects market signal, skills, and a clear next action.
+- Why it matters: Relevant signal because it matches FinTech, Risk Analyst, Python, dashboarding and can support a focused next action or portfolio story.
 - Suggested action: Prepare a payments risk analytics portfolio project.
 
 ### Merlion Trust Bank / Bank expanding AI wealth management team
 
 - Signal: A synthetic bank signal indicates hiring for AI assistants, client analytics, and portfolio reporting workflows.
-- Why it matters: Strong fit for AI, Data Analytics, AI Application Engineer because it connects market signal, skills, and a clear next action.
+- Why it matters: Relevant signal because it matches AI, AI Application Engineer, Python, AI applications and can support a focused next action or portfolio story.
 - Suggested action: Build a wealth management insight dashboard case study.
 
 ### StraitsBridge Consulting / Consulting firm launching AI transformation practice
 
 - Signal: A synthetic consulting signal suggests demand for AI workflow assessment, operating model design, and adoption metrics.
-- Why it matters: Strong fit for AI, Digital Transformation, Digital Transformation Consultant because it connects market signal, skills, and a clear next action.
+- Why it matters: Relevant signal because it matches AI, Digital Transformation Consultant, AI applications, workflow automation and can support a focused next action or portfolio story.
 - Suggested action: Write a one-page AI workflow assessment framework.
 
 ### Equator Compute Exchange / AI infrastructure hiring signal
 
 - Signal: A synthetic infrastructure signal indicates demand for capacity analytics, cost reporting, and customer operations data roles.
-- Why it matters: Strong fit for AI, Data Analytics, Data Analyst because it connects market signal, skills, and a clear next action.
+- Why it matters: Relevant signal because it matches AI, Data Analyst, Python, reporting and can support a focused next action or portfolio story.
 - Suggested action: Track infrastructure analytics roles as an adjacent Singapore AI opportunity path.
 
 
@@ -233,35 +235,35 @@
 ### AI governance checklist product
 
 - Target user: SME operations teams, AI application builders
-- Why now: Strong fit for AI, AI Governance, AI Governance Analyst because it connects market signal, skills, and a clear next action.
+- Why now: Promising manual-first MVP angle for SME operations teams, AI application builders, especially where AI governance, risk controls, documentation can produce a concrete weekly deliverable.
 - MVP: MVP is a spreadsheet plus short implementation guide.
 - Next step: Draft a one-page checklist mapped to agent evaluation, escalation, and logging.
 
 ### Bilingual resume optimization service
 
 - Target user: Chinese research professionals, engineers, data analysts
-- Why now: Strong fit for AI, FinTech, Business Analyst because it connects market signal, skills, and a clear next action.
+- Why now: Promising manual-first MVP angle for Chinese research professionals, engineers, especially where writing, job analysis, analytics can produce a concrete weekly deliverable.
 - MVP: MVP is a fixed-scope document review package.
 - Next step: Create three anonymized before-and-after examples and a clear disclaimer.
 
 ### AI-powered job opportunity brief
 
 - Target user: career transitioners, data analysts, AI builders
-- Why now: Strong fit for AI, AI Application Engineer because it connects market signal, skills, and a clear next action.
+- Why now: Promising manual-first MVP angle for career transitioners, data analysts, especially where Python, reporting can produce a concrete weekly deliverable.
 - MVP: MVP is a Markdown newsletter generated from curated CSV and YAML inputs.
 - Next step: Build a manual-first issue for one audience segment and interview five readers.
 
 ### Financial intelligence briefing agent
 
 - Target user: FinTech analysts, product researchers
-- Why now: Strong fit for AI, AI Application Engineer because it connects market signal, skills, and a clear next action.
+- Why now: Promising manual-first MVP angle for FinTech analysts, product researchers, especially where Python can produce a concrete weekly deliverable.
 - MVP: MVP is a CLI that converts curated links into a structured brief.
 - Next step: Prototype with synthetic inputs before adding any public-source connectors.
 
 ### Sector-specific report automation templates
 
 - Target user: analysts, consultants, solo operators
-- Why now: Strong fit for Data Analyst because it connects market signal, skills, and a clear next action.
+- Why now: Promising manual-first MVP angle for analysts, consultants, especially where workflow automation, reporting can produce a concrete weekly deliverable.
 - MVP: MVP is a template bundle with sample data and screenshots.
 - Next step: Package the Opportunity Radar template into a reusable demo with three sectors.
 
@@ -306,7 +308,6 @@
 | AI governance checklist product | Manual Idea Backlog | 2026-07-02 | https://example.org/opportunity-radar/ideas/ai-governance-checklist |
 | Data Analyst, Payments Risk | Synthetic Careers Board | 2026-07-05 | https://example.org/opportunity-radar/jobs/data-analyst-payments-risk |
 | Risk Data Analyst | Synthetic Careers Board | 2026-07-02 | https://example.org/opportunity-radar/jobs/risk-data-analyst |
-| RegTech Product Analyst | Synthetic Careers Board | 2026-06-25 | https://example.org/opportunity-radar/jobs/regtech-product-analyst |
 | Digital Transformation Consultant | Synthetic Careers Board | 2026-06-28 | https://example.org/opportunity-radar/jobs/digital-transformation-consultant |
 | Bilingual resume optimization service | Manual Idea Backlog | 2026-06-26 | https://example.org/opportunity-radar/ideas/bilingual-resume-optimization |
 | RegTech Accelerator Application Deadline | Synthetic Events Calendar | 2026-07-04 | https://example.org/opportunity-radar/events/regtech-accelerator-deadline |
@@ -317,6 +318,7 @@
 | AI Application Engineer | Synthetic Careers Board | 2026-07-03 | https://example.org/opportunity-radar/jobs/ai-application-engineer |
 | Financial intelligence briefing agent | Manual Idea Backlog | 2026-06-30 | https://example.org/opportunity-radar/ideas/financial-briefing-agent |
 | Wealth Management Data Analyst | Synthetic Careers Board | 2026-06-21 | https://example.org/opportunity-radar/jobs/wealth-management-data-analyst |
+| RegTech Product Analyst | Synthetic Careers Board | 2026-06-25 | https://example.org/opportunity-radar/jobs/regtech-product-analyst |
 | Research Analyst, AI Policy | Synthetic Careers Board | 2026-06-30 | https://example.org/opportunity-radar/jobs/research-analyst-ai-policy |
 | Business Analyst, AI Transformation | Synthetic Careers Board | 2026-07-01 | https://example.org/opportunity-radar/jobs/business-analyst-ai-transformation |
 | Payments risk analytics with Python and SQL | Generated Learning Priorities | 2026-07-06 | https://example.org/opportunity-radar/learning/2 |

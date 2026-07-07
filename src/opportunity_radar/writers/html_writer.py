@@ -4,7 +4,6 @@ from pathlib import Path
 
 import markdown
 
-
 HTML_SHELL = """<!doctype html>
 <html lang="{language}">
 <head>
@@ -12,8 +11,20 @@ HTML_SHELL = """<!doctype html>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>{title}</title>
   <style>
-    body {{ font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; line-height: 1.55; color: #17202a; margin: 0; background: #f7f8fa; }}
-    main {{ max-width: 1120px; margin: 0 auto; padding: 32px 20px 56px; background: #ffffff; min-height: 100vh; }}
+    body {{
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      line-height: 1.55;
+      color: #17202a;
+      margin: 0;
+      background: #f7f8fa;
+    }}
+    main {{
+      max-width: 1120px;
+      margin: 0 auto;
+      padding: 32px 20px 56px;
+      background: #ffffff;
+      min-height: 100vh;
+    }}
     h1, h2, h3 {{ color: #102033; }}
     table {{ border-collapse: collapse; width: 100%; margin: 16px 0 24px; font-size: 14px; }}
     th, td {{ border: 1px solid #d8dee8; padding: 8px 10px; vertical-align: top; }}

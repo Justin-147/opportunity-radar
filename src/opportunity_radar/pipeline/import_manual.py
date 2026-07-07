@@ -50,10 +50,22 @@ def load_records(path: str | Path) -> list[dict[str, Any]]:
 
 def load_manual_inputs(input_dir: str | Path) -> list[dict[str, Any]]:
     root = Path(input_dir)
+    if not root.exists():
+        raise ValueError(f"Input directory does not exist: {root}")
+    if not root.is_dir():
+        raise ValueError(f"Input path is not a directory: {root}")
+
+    supported_files = [
+        path for path in sorted(root.iterdir()) if path.suffix.lower() in {".csv", ".yaml", ".yml"}
+    ]
+    if not supported_files:
+        raise ValueError(
+            f"No supported input files found in {root}. Expected .csv, .yaml, or .yml."
+        )
+
     records: list[dict[str, Any]] = []
-    for path in sorted(root.iterdir()):
-        if path.suffix.lower() in {".csv", ".yaml", ".yml"}:
-            records.extend(load_records(path))
+    for path in supported_files:
+        records.extend(load_records(path))
     return records
 
 
@@ -65,8 +77,16 @@ def load_records_from_sources(
     for source in sources:
         if not source.get("enabled", True):
             continue
+        source_name = source.get("name", "Unnamed source")
+        if not source.get("path"):
+            raise ValueError(f"Source '{source_name}' is missing required path field.")
         path = root / source["path"]
-        source_records = load_records(path)
+        if not path.exists():
+            raise ValueError(f"Source '{source_name}' file does not exist: {path}")
+        try:
+            source_records = load_records(path)
+        except Exception as exc:
+            raise ValueError(f"Failed to load source '{source_name}' from {path}: {exc}") from exc
         for record in source_records:
             record.setdefault("source", source.get("name", "Manual Source"))
             record.setdefault("source_type", source.get("source_type", "manual"))

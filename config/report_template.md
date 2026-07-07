@@ -1,5 +1,7 @@
 # Singapore AI & FinTech Opportunity Radar | {{ generated_at[:10] }}
 
+> Data notice: {{ data_notice | md_cell }}
+
 ## Executive Summary
 
 {% for line in executive_summary %}
@@ -24,7 +26,7 @@
 | Opportunity | Category | Company / Source | Score | Why It Matters | Suggested Action |
 |---|---|---|---:|---|---|
 {% for item in top_opportunities %}
-| [{{ item.title }}]({{ item.url }}) | {{ item.category }} | {{ item.company or item.source }} | {{ "%.2f"|format(item.final_score) }} | {{ item.fit_reason }} | {{ item.suggested_action }} |
+| [{{ item.title | md_cell }}]({{ item.url | safe_url }}) | {{ item.category | md_cell }} | {{ (item.company or item.source) | md_cell }} | {{ item.final_score | fmt_score }} | {{ item.fit_reason | md_cell }} | {{ item.suggested_action | md_cell }} |
 {% endfor %}
 
 ## Best-Fit Roles This Week
@@ -39,7 +41,7 @@
 | Company / Source | Signal | Why It Matters | Suggested Action |
 |---|---|---|---|
 {% for company in top_companies_to_watch %}
-| {{ company.company }} | {{ company.signal }} | {{ company.why_it_matters }} | {{ company.suggested_action }} |
+| {{ company.company | md_cell }} | {{ company.signal | md_cell }} | {{ company.why_it_matters | md_cell }} | {{ company.suggested_action | md_cell }} |
 {% endfor %}
 
 ## Portfolio Project to Build
@@ -123,7 +125,7 @@
 | Title | Source | Date | URL |
 |---|---|---|---|
 {% for source in source_list %}
-| {{ source.title }} | {{ source.source }} | {{ source.date }} | {{ source.url }} |
+| {{ source.title | md_cell }} | {{ source.source | md_cell }} | {{ source.date | md_cell }} | {{ source.url | safe_url | md_cell }} |
 {% endfor %}
 
 ## Disclaimer

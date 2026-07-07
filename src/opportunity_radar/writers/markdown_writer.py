@@ -1,5 +1,6 @@
 from __future__ import annotations
 
+import re
 from pathlib import Path
 
 from jinja2 import Environment, FileSystemLoader, select_autoescape
@@ -7,8 +8,14 @@ from jinja2 import Environment, FileSystemLoader, select_autoescape
 from opportunity_radar.config import get_project_root
 from opportunity_radar.models import OpportunityItem, OpportunityReport
 
+ZH_DATA_NOTICE = (
+    "本演示报告使用面向新加坡场景的合成样例信号。"
+    "用于真实决策前，请替换为人工整理或公开来源数据。"
+)
 
 ZH_TEMPLATE = """# 新加坡 AI 与 FinTech 机会雷达 | {{ generated_at[:10] }}
+
+> 数据说明：{{ data_notice_zh }}
 
 ## 执行摘要
 
@@ -34,7 +41,14 @@ ZH_TEMPLATE = """# 新加坡 AI 与 FinTech 机会雷达 | {{ generated_at[:10] 
 | 机会 | 类别 | 公司 / 来源 | 分数 | 为什么重要 | 建议行动 |
 |---|---|---|---:|---|---|
 {% for item in top_opportunities %}
-| [{{ item.title }}]({{ item.url }}) | {{ item.category }} | {{ item.company or item.source }} | {{ "%.2f"|format(item.final_score) }} | {{ item.fit_reason }} | {{ item.suggested_action }} |
+{% set t = item.title | md_cell %}
+{% set u = item.url | safe_url %}
+{% set cat = item.category | md_cell %}
+{% set co = (item.company or item.source) | md_cell %}
+{% set score = item.final_score | fmt_score %}
+{% set why = item.fit_reason | md_cell %}
+{% set act = item.suggested_action | md_cell %}
+| [{{ t }}]({{ u }}) | {{ cat }} | {{ co }} | {{ score }} | {{ why }} | {{ act }} |
 {% endfor %}
 
 ## 本周最匹配岗位方向
@@ -49,7 +63,11 @@ ZH_TEMPLATE = """# 新加坡 AI 与 FinTech 机会雷达 | {{ generated_at[:10] 
 | 公司 / 来源 | 信号 | 为什么重要 | 建议行动 |
 |---|---|---|---|
 {% for company in top_companies_to_watch %}
-| {{ company.company }} | {{ company.signal }} | {{ company.why_it_matters }} | {{ company.suggested_action }} |
+{% set co = company.company | md_cell %}
+{% set signal = company.signal | md_cell %}
+{% set why = company.why_it_matters | md_cell %}
+{% set act = company.suggested_action | md_cell %}
+| {{ co }} | {{ signal }} | {{ why }} | {{ act }} |
 {% endfor %}
 
 ## 建议打造的作品集项目
@@ -107,7 +125,11 @@ ZH_TEMPLATE = """# 新加坡 AI 与 FinTech 机会雷达 | {{ generated_at[:10] 
 {% for item in side_hustles %}
 ### {{ item.title }}
 
-- 目标用户：{{ item.target_audience | join(", ") if item.target_audience else target_user_fit_zh(item) }}
+{% if item.target_audience %}
+- 目标用户：{{ item.target_audience | join(", ") }}
+{% else %}
+- 目标用户：{{ target_user_fit_zh(item) }}
+{% endif %}
 - 为什么现在值得做：{{ item.fit_reason }}
 - MVP：{{ item.source_notes or "先做一个小范围、手动优先的原型，并找 5-10 个目标用户验证。" }}
 - 下一步：{{ item.suggested_action }}
@@ -133,13 +155,47 @@ ZH_TEMPLATE = """# 新加坡 AI 与 FinTech 机会雷达 | {{ generated_at[:10] 
 | 标题 | 来源 | 日期 | URL |
 |---|---|---|---|
 {% for source in source_list %}
-| {{ source.title }} | {{ source.source }} | {{ source.date }} | {{ source.url }} |
+{% set t = source.title | md_cell %}
+{% set src = source.source | md_cell %}
+{% set d = source.date | md_cell %}
+{% set u = source.url | safe_url | md_cell %}
+| {{ t }} | {{ src }} | {{ d }} | {{ u }} |
 {% endfor %}
 
 ## 免责声明
 
 本报告是信息型机会情报原型，不提供就业保证、移民建议、法律建议、投资建议，也不提供自动投递服务。
 """
+
+
+def md_cell(value: object) -> str:
+    if value is None:
+        return ""
+    text = str(value)
+    text = re.sub(r"\s+", " ", text.replace("\r", " ").replace("\n", " "))
+    return text.replace("|", r"\|").strip()
+
+
+def safe_url(value: object) -> str:
+    text = "" if value is None else str(value).strip()
+    if not (text.startswith("http://") or text.startswith("https://")):
+        return "#"
+    if any(token in text for token in ["\r", "\n", "|", " "]):
+        return "#"
+    return text
+
+
+def fmt_score(value: object) -> str:
+    try:
+        return f"{float(str(value)):.2f}"
+    except (TypeError, ValueError):
+        return "0.00"
+
+
+def _register_filters(env: Environment) -> None:
+    env.filters["md_cell"] = md_cell
+    env.filters["safe_url"] = safe_url
+    env.filters["fmt_score"] = fmt_score
 
 
 def target_user_fit(item: OpportunityItem) -> str:
@@ -177,6 +233,9 @@ def _context_from_report(report: OpportunityReport) -> dict:
     return {
         "profile_name": report.profile,
         "generated_at": generated_at,
+        "data_notice": report.data_notice,
+        "data_notice_zh": ZH_DATA_NOTICE,
+        "methodology_note": report.methodology_note,
         "executive_summary": report.executive_summary,
         "what_changed": report.what_changed,
         "this_week_focus": report.this_week_focus,
@@ -201,6 +260,7 @@ def render_markdown(report: OpportunityReport, language: str = "en") -> str:
     context = _context_from_report(report)
     if language == "zh":
         env = Environment(autoescape=False, trim_blocks=True, lstrip_blocks=True)
+        _register_filters(env)
         template = env.from_string(ZH_TEMPLATE)
         return template.render(**context).strip() + "\n"
 
@@ -211,6 +271,7 @@ def render_markdown(report: OpportunityReport, language: str = "en") -> str:
         trim_blocks=True,
         lstrip_blocks=True,
     )
+    _register_filters(env)
     template = env.get_template("report_template.md")
     return template.render(**context).strip() + "\n"
 

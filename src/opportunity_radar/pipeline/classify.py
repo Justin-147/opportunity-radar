@@ -4,7 +4,6 @@ from typing import Any
 
 from opportunity_radar.models import OpportunityItem
 
-
 VALID_CATEGORIES = {
     "job",
     "event",
@@ -34,7 +33,9 @@ def infer_category(payload: dict[str, Any] | OpportunityItem) -> str:
 
     if current in VALID_CATEGORIES:
         return current
-    if any(word in text for word in ["hackathon", "webinar", "conference", "meetup", "accelerator"]):
+    if any(
+        word in text for word in ["hackathon", "webinar", "conference", "meetup", "accelerator"]
+    ):
         return "event"
     if any(word in text for word in ["policy", "regulator", "framework", "initiative"]):
         return "policy"

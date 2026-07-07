@@ -40,7 +40,9 @@ def test_relevance_score_higher_for_ai_fintech_risk_roles():
         datetime(2026, 7, 1),
     ).model_copy(update={"keywords": ["retail"], "required_skills": ["sales"]})
 
-    assert calculate_relevance_score(relevant, profile) > calculate_relevance_score(unrelated, profile)
+    assert calculate_relevance_score(relevant, profile) > calculate_relevance_score(
+        unrelated, profile
+    )
 
 
 def test_freshness_score_higher_for_recent_items():
@@ -49,14 +51,20 @@ def test_freshness_score_higher_for_recent_items():
     fresh = make_item("Fresh Role", "AI risk role.", datetime(2026, 7, 1))
     old = make_item("Old Role", "AI risk role.", datetime(2025, 12, 1))
 
-    assert calculate_freshness_score(fresh, rules, now) > calculate_freshness_score(old, rules, now)
+    assert calculate_freshness_score(fresh, rules, now) > calculate_freshness_score(
+        old, rules, now
+    )
 
 
 def test_final_score_between_zero_and_one():
     profile = load_profile("singapore_ai_fintech")
     rules = load_scoring_rules()
     scored = score_item(
-        make_item("AI Application Engineer", "AI applications for FinTech risk teams.", datetime(2026, 7, 1)),
+        make_item(
+            "AI Application Engineer",
+            "AI applications for FinTech risk teams.",
+            datetime(2026, 7, 1),
+        ),
         profile,
         rules,
         datetime(2026, 7, 6),
