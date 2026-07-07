@@ -1,10 +1,14 @@
 # Opportunity Radar：新加坡 AI 与 FinTech 机会情报系统
 
 ![tests](https://github.com/Justin-147/opportunity-radar/actions/workflows/tests.yml/badge.svg)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
+![Python](https://img.shields.io/badge/python-3.11%2B-blue.svg)
 
 Opportunity Radar 是一个 local-first 的机会情报系统，面向具有技术、科研、数据或工程背景，并希望探索新加坡 AI、FinTech、RegTech、风险分析、数据分析和数字化转型机会的人群。
 
 它将人工整理或公开来源风格的岗位、政策、公司、活动、学习方向和副业机会信号转化为结构化周报，并提供相关性评分、行动价值评分、建议动作和来源列表。
+
+项目强调可审计性：可以校验输入，可以用固定时间生成可复现报告，也可以把运行时输出隔离到 `.tmp/`。
 
 该项目既是一个可展示的作品集原型，也可以作为未来 newsletter、咨询服务或机会情报产品的基础。
 
@@ -79,7 +83,8 @@ Opportunity Radar 使用确定性的本地流水线：
 ```powershell
 cd opportunity-radar
 python -m pip install -e .[dev]
-python -m opportunity_radar.main generate --profile singapore_ai_fintech --mock
+python -m opportunity_radar.main validate --input-dir examples/sample_inputs
+python -m opportunity_radar.main generate --profile singapore_ai_fintech --mock --as-of 2026-07-06
 ```
 
 如果不安装包，可以使用：
@@ -97,22 +102,47 @@ python -m opportunity_radar.main generate --profile singapore_ai_fintech --mock
 python -m opportunity_radar.main generate --profile singapore_ai_fintech --mock
 ```
 
+校验人工输入：
+
+```powershell
+python -m opportunity_radar.main validate --input-dir examples/sample_inputs
+```
+
 从人工输入目录生成：
 
 ```powershell
 python -m opportunity_radar.main generate --profile singapore_ai_fintech --input-dir examples/sample_inputs
 ```
 
+使用固定报告时间生成：
+
+```powershell
+python -m opportunity_radar.main generate --profile singapore_ai_fintech --mock --as-of 2026-07-06
+```
+
+生成到独立输出目录：
+
+```powershell
+python -m opportunity_radar.main generate --profile singapore_ai_fintech --mock --as-of 2026-07-06 --output-root .tmp/opportunity-radar-output
+```
+
+开启严格校验后生成：
+
+```powershell
+python -m opportunity_radar.main generate --profile singapore_ai_fintech --input-dir examples/sample_inputs --strict-validation --as-of 2026-07-06 --output-root .tmp/validated-output
+```
+
 生成并刷新稳定样例：
 
 ```powershell
-python -m opportunity_radar.main generate --profile singapore_ai_fintech --mock --copy-samples
+python -m opportunity_radar.main generate --profile singapore_ai_fintech --mock --as-of 2026-07-06 --copy-samples
 ```
 
 预期输出：
 
 ```text
 data/processed/YYYY-MM-DD_singapore_ai_fintech.json
+reports/json/YYYY-MM-DD_singapore_ai_fintech.json
 reports/markdown/YYYY-MM-DD_singapore_ai_fintech_en.md
 reports/markdown/YYYY-MM-DD_singapore_ai_fintech_zh.md
 reports/html/YYYY-MM-DD_singapore_ai_fintech_en.html
@@ -122,6 +152,12 @@ reports/html/YYYY-MM-DD_singapore_ai_fintech_zh.html
 ## 本地演示脚本
 
 安装项目后，可以运行本地演示流程：
+
+```bash
+python scripts/run_demo.py
+```
+
+PowerShell 包装脚本也会调用同一个跨平台脚本：
 
 ```powershell
 .\scripts\run_demo.ps1
@@ -133,11 +169,17 @@ reports/html/YYYY-MM-DD_singapore_ai_fintech_zh.html
 streamlit run src/opportunity_radar/dashboard/app.py
 ```
 
-看板包含报告选择器、机会总数、类别分布、分数分布、Top Opportunities、职位机会、副业想法和 Markdown 报告预览。
+看板会优先加载本地生成报告，并在没有生成报告时回退到精选样例输出。它包含类别筛选、最低分数、关键词搜索、分数图表、可用时的链接列和 Markdown 报告预览。
 
 ## 截图
 
-后续可以补充截图，用于展示：
+可以先本地启动看板，再生成截图：
+
+```powershell
+streamlit run src/opportunity_radar/dashboard/app.py
+```
+
+建议截图：
 
 - Opportunity Dashboard；
 - 生成的每周机会简报；
@@ -158,6 +200,12 @@ streamlit run src/opportunity_radar/dashboard/app.py
 - [英文每周样例报告](examples/sample_reports/weekly_opportunity_radar_en.md)
 - [中文每周样例报告](examples/sample_reports/weekly_opportunity_radar_zh.md)
 - [样例 JSON 输出](examples/sample_outputs/weekly_opportunity_radar.json)
+
+## 文档
+
+- [方法说明](docs/methodology.md)
+- [输入格式](docs/input_schema.md)
+- [更新日志](CHANGELOG.md)
 
 ## 评分公式
 
@@ -215,8 +263,13 @@ pytest
 提交前请运行：
 
 ```powershell
+ruff check .
+python -m compileall src tests scripts
+mypy src/opportunity_radar
 pytest
-python -m opportunity_radar.main generate --profile singapore_ai_fintech --mock
+python -m opportunity_radar.main validate --input-dir examples/sample_inputs
+python -m opportunity_radar.main generate --profile singapore_ai_fintech --mock --as-of 2026-07-06 --output-root .tmp/final-check
+python scripts/verify_line_endings.py
 ```
 
 ## 免责声明

@@ -1,9 +1,19 @@
 from __future__ import annotations
 
-from datetime import datetime, timezone
+from datetime import UTC, datetime
 
 from opportunity_radar.models import AudienceProfile, OpportunityItem, OpportunityReport
 from opportunity_radar.pipeline.rank import filter_category, top_n
+
+DATA_NOTICE = (
+    "Demo reports use synthetic, Singapore-focused sample signals. "
+    "Replace sample inputs with curated public or manual sources before using for real decisions."
+)
+
+METHODOLOGY_NOTE = (
+    "Signals are normalized, categorized, deduplicated, and scored across relevance, "
+    "actionability, freshness, credibility, and uniqueness."
+)
 
 
 def build_executive_summary(profile: AudienceProfile, items: list[OpportunityItem]) -> list[str]:
@@ -15,10 +25,22 @@ def build_executive_summary(profile: AudienceProfile, items: list[OpportunityIte
     categories_text = ", ".join(top_categories) or "jobs, policy signals, and project ideas"
     best_roles = ", ".join(profile.target_roles[:3])
     return [
-        f"Strongest signals this week cluster around {categories_text} for the {profile.name} audience.",
-        f"The best role categories to watch are {best_roles}, supported by analytics, governance, and automation skills.",
-        "The most portfolio-friendly direction is to convert policy, company, and job signals into small report automation or risk analytics artifacts.",
-        "Recommended focus this week: pick one job family, one portfolio artifact, and one networking or event action.",
+        (
+            f"Strongest signals this week cluster around {categories_text} "
+            f"for the {profile.name} audience."
+        ),
+        (
+            f"The best role categories to watch are {best_roles}, supported by "
+            "analytics, governance, and automation skills."
+        ),
+        (
+            "The most portfolio-friendly direction is to convert policy, company, "
+            "and job signals into small report automation or risk analytics artifacts."
+        ),
+        (
+            "Recommended focus this week: pick one job family, one portfolio artifact, "
+            "and one networking or event action."
+        ),
     ]
 
 
@@ -28,18 +50,24 @@ def build_actions(items: list[OpportunityItem]) -> list[str]:
     actions = []
     if top_jobs:
         actions.append(
-            f"Update one resume section with evidence for {top_jobs[0].title}, then map the role to one portfolio artifact."
+            f"Update one resume section with evidence for {top_jobs[0].title}, "
+            "then map the role to one portfolio artifact."
         )
     if len(top_jobs) > 1:
         actions.append(
-            f"Compare requirements from {top_jobs[0].company} and {top_jobs[1].company} to identify recurring AI, analytics, and risk skills."
+            f"Compare requirements from {top_jobs[0].company} and {top_jobs[1].company} "
+            "to identify recurring AI, analytics, and risk skills."
         )
     if top_side_hustles:
         actions.append(
-            f"Validate the side-hustle idea '{top_side_hustles[0].title}' with 5-10 target users before building more code."
+            f"Validate the side-hustle idea '{top_side_hustles[0].title}' "
+            "with 5-10 target users before building more code."
         )
     while len(actions) < 3:
-        actions.append("Publish one short opportunity analysis note using a synthetic or public-source-style signal.")
+        actions.append(
+            "Publish one short opportunity analysis note using a synthetic "
+            "or public-source-style signal."
+        )
     return actions[:3]
 
 
@@ -47,9 +75,14 @@ def build_this_week_focus(profile: AudienceProfile) -> dict[str, str]:
     if profile.id == "singapore_ai_fintech":
         return {
             "primary_role_family": "AI Governance / Risk Analytics",
-            "best_fit_roles": "AI Governance Analyst, Risk Data Analyst, RegTech Product Analyst, AI Application Engineer",
+            "best_fit_roles": (
+                "AI Governance Analyst, Risk Data Analyst, RegTech Product Analyst, "
+                "AI Application Engineer"
+            ),
             "best_portfolio_artifact": "AI agent control checklist or risk intelligence dashboard",
-            "suggested_networking_action": "register for one FinTech, RegTech, or AI governance event this week",
+            "suggested_networking_action": (
+                "register for one FinTech, RegTech, or AI governance event this week"
+            ),
         }
 
     primary_roles = " / ".join(profile.target_roles[:2]) or "AI / analytics roles"
@@ -72,10 +105,18 @@ def build_what_changed(items: list[OpportunityItem]) -> list[str]:
         changes.append(f"Hiring signals are strongest around {roles}.")
     if top_companies:
         companies = ", ".join(item.company or item.source for item in top_companies)
-        changes.append(f"Company watchlist activity points to {companies} as useful signals to track.")
+        changes.append(
+            f"Company watchlist activity points to {companies} as useful signals to track."
+        )
     if top_policy:
-        changes.append(f"Policy and ecosystem signals continue to favor AI governance, risk controls, and digital finance talent.")
-    changes.append("Portfolio-friendly opportunities cluster around AI controls, payments risk analytics, and report automation.")
+        changes.append(
+            "Policy and ecosystem signals continue to favor AI governance, "
+            "risk controls, and digital finance talent."
+        )
+    changes.append(
+        "Portfolio-friendly opportunities cluster around AI controls, "
+        "payments risk analytics, and report automation."
+    )
     return changes[:4]
 
 
@@ -83,16 +124,31 @@ def build_best_fit_roles(profile: AudienceProfile) -> dict[str, str]:
     if profile.id == "singapore_ai_fintech":
         return {
             "role_family": "AI Governance / Risk Analytics",
-            "why_it_fits": "This role family connects research, data analysis, Python, risk controls, and financial services transformation.",
-            "keywords_to_add": "AI governance, risk analytics, workflow automation, Python, dashboarding, compliance analytics",
-            "suggested_application_angle": "Position your background around translating complex signals into controls, dashboards, and decision-ready reports.",
+            "why_it_fits": (
+                "This role family connects research, data analysis, Python, "
+                "risk controls, and financial services transformation."
+            ),
+            "keywords_to_add": (
+                "AI governance, risk analytics, workflow automation, Python, "
+                "dashboarding, compliance analytics"
+            ),
+            "suggested_application_angle": (
+                "Position your background around translating complex signals into "
+                "controls, dashboards, and decision-ready reports."
+            ),
         }
 
     return {
         "role_family": " / ".join(profile.target_roles[:2]) or "AI / analytics roles",
-        "why_it_fits": "This role family matches the selected audience profile and recurring opportunity signals.",
+        "why_it_fits": (
+            "This role family matches the selected audience profile and recurring "
+            "opportunity signals."
+        ),
         "keywords_to_add": ", ".join(profile.transition_keywords[:6]),
-        "suggested_application_angle": "Use one concrete portfolio artifact to connect your prior experience with the target role family.",
+        "suggested_application_angle": (
+            "Use one concrete portfolio artifact to connect your prior experience "
+            "with the target role family."
+        ),
     }
 
 
@@ -110,16 +166,32 @@ def build_top_companies_to_watch(items: list[OpportunityItem]) -> list[dict[str,
     return companies
 
 
-def build_portfolio_project(profile: AudienceProfile, items: list[OpportunityItem]) -> dict[str, str]:
+def build_portfolio_project(
+    profile: AudienceProfile, items: list[OpportunityItem]
+) -> dict[str, str]:
     top_side_hustles = filter_category(items, "side_hustle", 1)
     if profile.id == "singapore_ai_fintech":
         return {
             "title": "AI Agent Control Checklist or Risk Intelligence Dashboard",
-            "target_user": "AI governance analysts, risk analysts, and FinTech career transitioners",
-            "problem_solved": "Turns scattered AI governance and risk signals into a practical control or dashboard artifact.",
-            "mvp_scope": "A one-page control checklist plus a small Streamlit dashboard using synthetic risk and policy signals.",
-            "skills_demonstrated": "Python, data modeling, risk analytics, AI governance, reporting, and dashboarding",
-            "suggested_next_step": "Build the checklist first, then add one synthetic dashboard view and a short methodology note.",
+            "target_user": (
+                "AI governance analysts, risk analysts, and FinTech career transitioners"
+            ),
+            "problem_solved": (
+                "Turns scattered AI governance and risk signals into a practical "
+                "control or dashboard artifact."
+            ),
+            "mvp_scope": (
+                "A one-page control checklist plus a small Streamlit dashboard using "
+                "synthetic risk and policy signals."
+            ),
+            "skills_demonstrated": (
+                "Python, data modeling, risk analytics, AI governance, reporting, "
+                "and dashboarding"
+            ),
+            "suggested_next_step": (
+                "Build the checklist first, then add one synthetic dashboard view "
+                "and a short methodology note."
+            ),
         }
     if top_side_hustles:
         idea = top_side_hustles[0]
@@ -127,7 +199,8 @@ def build_portfolio_project(profile: AudienceProfile, items: list[OpportunityIte
             "title": idea.title,
             "target_user": ", ".join(idea.target_audience) or profile.name,
             "problem_solved": idea.summary,
-            "mvp_scope": idea.source_notes or "A narrow manual-first prototype with synthetic sample data.",
+            "mvp_scope": idea.source_notes
+            or "A narrow manual-first prototype with synthetic sample data.",
             "skills_demonstrated": ", ".join(idea.required_skills or idea.keywords),
             "suggested_next_step": idea.suggested_action,
         }
@@ -160,7 +233,7 @@ def build_report_context(
     items: list[OpportunityItem],
     generated_at: datetime | None = None,
 ) -> dict:
-    generated = generated_at or datetime.now(timezone.utc).replace(tzinfo=None)
+    generated = generated_at or datetime.now(UTC).replace(tzinfo=None)
     sorted_items = top_n(items, len(items))
     context = {
         "profile_name": profile.name,
@@ -189,7 +262,7 @@ def build_report(
     items: list[OpportunityItem],
     generated_at: datetime | None = None,
 ) -> OpportunityReport:
-    generated = generated_at or datetime.now(timezone.utc).replace(tzinfo=None)
+    generated = generated_at or datetime.now(UTC).replace(tzinfo=None)
     context = build_report_context(profile, items, generated)
     date_label = generated.date().isoformat()
     return OpportunityReport(
@@ -197,6 +270,8 @@ def build_report(
         profile=profile.id,
         generated_at=generated,
         title=f"Singapore AI & FinTech Opportunity Radar | {date_label}",
+        data_notice=DATA_NOTICE,
+        methodology_note=METHODOLOGY_NOTE,
         executive_summary=context["executive_summary"],
         what_changed=context["what_changed"],
         this_week_focus=context["this_week_focus"],

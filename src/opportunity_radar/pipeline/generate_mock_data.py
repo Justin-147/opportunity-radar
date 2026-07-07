@@ -1,6 +1,6 @@
 from __future__ import annotations
 
-from datetime import datetime
+from datetime import UTC, datetime
 
 from opportunity_radar.models import AudienceProfile, OpportunityItem
 
@@ -8,35 +8,50 @@ from opportunity_radar.models import AudienceProfile, OpportunityItem
 def generate_learning_items(
     profile: AudienceProfile, generated_at: datetime | None = None
 ) -> list[OpportunityItem]:
-    published_at = generated_at or datetime.utcnow()
+    published_at = generated_at or datetime.now(UTC).replace(tzinfo=None)
     learning_specs = [
         (
             "AI governance control testing",
-            "Practice mapping AI assistant risks to controls, test evidence, and monitoring metrics.",
+            (
+                "Practice mapping AI assistant risks to controls, test evidence, "
+                "and monitoring metrics."
+            ),
             "Complete one regulator-style checklist and attach it to a portfolio case study.",
             ["AI governance", "controls", "model monitoring"],
         ),
         (
             "Payments risk analytics with Python and SQL",
-            "Build the core analytics skill set behind fraud, merchant risk, and transaction monitoring roles.",
+            (
+                "Build the core analytics skill set behind fraud, merchant risk, "
+                "and transaction monitoring roles."
+            ),
             "Use a tutorial or synthetic dataset and publish one dashboard screenshot.",
             ["payments risk", "Python", "SQL", "dashboarding"],
         ),
         (
             "Product analytics for tokenisation workflows",
-            "Understand user journeys, metrics, and risk questions in tokenised asset product experiments.",
+            (
+                "Understand user journeys, metrics, and risk questions in tokenised "
+                "asset product experiments."
+            ),
             "Read one product analytics guide and draft a metric tree for a tokenisation MVP.",
             ["tokenisation", "product analytics", "digital assets"],
         ),
         (
             "Streamlit dashboarding for opportunity intelligence",
-            "Convert structured signals into a browsable dashboard that demonstrates analyst workflow thinking.",
+            (
+                "Convert structured signals into a browsable dashboard that demonstrates "
+                "analyst workflow thinking."
+            ),
             "Add filters, score tables, and Markdown previews to a local Streamlit app.",
             ["Streamlit", "dashboarding", "reporting"],
         ),
         (
             "Report automation with Jinja2 and Markdown",
-            "Show that fragmented research inputs can become repeatable weekly intelligence reports.",
+            (
+                "Show that fragmented research inputs can become repeatable weekly "
+                "intelligence reports."
+            ),
             "Create one reusable report template and generate English and Chinese outputs.",
             ["Jinja2", "Markdown", "report automation"],
         ),
@@ -61,7 +76,9 @@ def generate_learning_items(
                 target_audience=[profile.name],
                 required_skills=keywords,
                 suggested_action=action,
-                source_notes="Generated from the target audience profile and top opportunity themes.",
+                source_notes=(
+                    "Generated from the target audience profile and top opportunity themes."
+                ),
             )
         )
     return items

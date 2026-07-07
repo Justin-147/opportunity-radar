@@ -19,7 +19,12 @@ dependencies = [
 ]
 
 [project.optional-dependencies]
-dev = ["pytest>=7.4"]
+dev = [
+  "pytest>=7.4",
+  "ruff>=0.6",
+  "mypy>=1.10",
+  "build>=1.2",
+]
 
 [project.scripts]
 opportunity-radar = "opportunity_radar.main:main"
@@ -31,3 +36,23 @@ where = ["src"]
 pythonpath = ["src"]
 testpaths = ["tests"]
 addopts = "-q"
+
+[tool.ruff]
+target-version = "py311"
+line-length = 100
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "UP", "B"]
+ignore = []
+
+[tool.ruff.format]
+quote-style = "double"
+indent-style = "space"
+line-ending = "lf"
+
+[tool.mypy]
+python_version = "3.11"
+ignore_missing_imports = true
+no_site_packages = true
+warn_unused_configs = true
+strict = false
