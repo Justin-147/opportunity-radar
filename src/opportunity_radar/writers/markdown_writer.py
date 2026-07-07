@@ -1,6 +1,7 @@
 from __future__ import annotations
 
 import re
+from html import escape
 from pathlib import Path
 
 from jinja2 import Environment, FileSystemLoader, select_autoescape
@@ -15,26 +16,26 @@ ZH_DATA_NOTICE = (
 
 ZH_TEMPLATE = """# 新加坡 AI 与 FinTech 机会雷达 | {{ generated_at[:10] }}
 
-> 数据说明：{{ data_notice_zh }}
+> 数据说明：{{ data_notice_zh | md_text }}
 
 ## 执行摘要
 
 {% for line in executive_summary %}
-- {{ line }}
+- {{ line | md_text }}
 {% endfor %}
 
 ## 本周变化
 
 {% for line in what_changed %}
-- {{ line }}
+- {{ line | md_text }}
 {% endfor %}
 
 ## 本周重点
 
-- 主要岗位方向：{{ this_week_focus.primary_role_family }}
-- 本周最匹配岗位：{{ this_week_focus.best_fit_roles }}
-- 最值得构建的作品集产物：{{ this_week_focus.best_portfolio_artifact }}
-- 建议 networking 动作：{{ this_week_focus.suggested_networking_action }}
+- 主要岗位方向：{{ this_week_focus.primary_role_family | md_text }}
+- 本周最匹配岗位：{{ this_week_focus.best_fit_roles | md_text }}
+- 最值得构建的作品集产物：{{ this_week_focus.best_portfolio_artifact | md_text }}
+- 建议 networking 动作：{{ this_week_focus.suggested_networking_action | md_text }}
 
 ## 重点机会
 
@@ -53,10 +54,10 @@ ZH_TEMPLATE = """# 新加坡 AI 与 FinTech 机会雷达 | {{ generated_at[:10] 
 
 ## 本周最匹配岗位方向
 
-- 岗位方向：{{ best_fit_roles.role_family }}
-- 为什么匹配：{{ best_fit_roles.why_it_fits }}
-- 简历关键词：{{ best_fit_roles.keywords_to_add }}
-- 申请切入角度：{{ best_fit_roles.suggested_application_angle }}
+- 岗位方向：{{ best_fit_roles.role_family | md_text }}
+- 为什么匹配：{{ best_fit_roles.why_it_fits | md_text }}
+- 简历关键词：{{ best_fit_roles.keywords_to_add | md_text }}
+- 申请切入角度：{{ best_fit_roles.suggested_application_angle | md_text }}
 
 ## 本周值得关注公司
 
@@ -72,82 +73,82 @@ ZH_TEMPLATE = """# 新加坡 AI 与 FinTech 机会雷达 | {{ generated_at[:10] 
 
 ## 建议打造的作品集项目
 
-### {{ portfolio_project.title }}
+### {{ portfolio_project.title | md_text }}
 
-- 目标用户：{{ portfolio_project.target_user }}
-- 解决的问题：{{ portfolio_project.problem_solved }}
-- MVP 范围：{{ portfolio_project.mvp_scope }}
-- 展示技能：{{ portfolio_project.skills_demonstrated }}
-- 建议下一步：{{ portfolio_project.suggested_next_step }}
+- 目标用户：{{ portfolio_project.target_user | md_text }}
+- 解决的问题：{{ portfolio_project.problem_solved | md_text }}
+- MVP 范围：{{ portfolio_project.mvp_scope | md_text }}
+- 展示技能：{{ portfolio_project.skills_demonstrated | md_text }}
+- 建议下一步：{{ portfolio_project.suggested_next_step | md_text }}
 
 ## 岗位机会
 
 {% for item in jobs %}
-### {{ item.role or item.title }} | {{ item.company or "Unknown" }}
+### {{ (item.role or item.title) | md_text }} | {{ (item.company or "Unknown") | md_text }}
 
-- 匹配原因：{{ item.fit_reason }}
-- 关键词：{{ item.keywords | join(", ") }}
+- 匹配原因：{{ item.fit_reason | md_text }}
+- 关键词：{{ item.keywords | join(", ") | md_text }}
 - 评分拆解：
   - 相关性：{{ "%.2f"|format(item.relevance_score) }}
   - 行动价值：{{ "%.2f"|format(item.actionability_score) }}
   - 新鲜度：{{ "%.2f"|format(item.freshness_score) }}
   - 可信度：{{ "%.2f"|format(item.credibility_score) }}
   - 独特性：{{ "%.2f"|format(item.uniqueness_score) }}
-- 适合人群：{{ target_user_fit_zh(item) }}
-- 建议行动：{{ item.suggested_action }}
+- 适合人群：{{ target_user_fit_zh(item) | md_text }}
+- 建议行动：{{ item.suggested_action | md_text }}
 
 {% endfor %}
 
 ## 政策 / 生态信号
 
 {% for item in policy_signals %}
-### {{ item.title }}
+### {{ item.title | md_text }}
 
-- 事实：{{ item.summary }}
-- 为什么重要：{{ item.fit_reason }}
-- 职业 / 项目启发：{{ item.suggested_action }}
+- 事实：{{ item.summary | md_text }}
+- 为什么重要：{{ item.fit_reason | md_text }}
+- 职业 / 项目启发：{{ item.suggested_action | md_text }}
 
 {% endfor %}
 
 ## 公司信号
 
 {% for item in company_signals %}
-### {{ item.company or item.source }} / {{ item.title }}
+### {{ (item.company or item.source) | md_text }} / {{ item.title | md_text }}
 
-- 信号：{{ item.summary }}
-- 为什么重要：{{ item.fit_reason }}
-- 建议行动：{{ item.suggested_action }}
+- 信号：{{ item.summary | md_text }}
+- 为什么重要：{{ item.fit_reason | md_text }}
+- 建议行动：{{ item.suggested_action | md_text }}
 
 {% endfor %}
 
 ## 副业 / 项目想法
 
 {% for item in side_hustles %}
-### {{ item.title }}
+### {{ item.title | md_text }}
 
 {% if item.target_audience %}
-- 目标用户：{{ item.target_audience | join(", ") }}
+- 目标用户：{{ item.target_audience | join(", ") | md_text }}
 {% else %}
-- 目标用户：{{ target_user_fit_zh(item) }}
+- 目标用户：{{ target_user_fit_zh(item) | md_text }}
 {% endif %}
-- 为什么现在值得做：{{ item.fit_reason }}
-- MVP：{{ item.source_notes or "先做一个小范围、手动优先的原型，并找 5-10 个目标用户验证。" }}
-- 下一步：{{ item.suggested_action }}
+- 为什么现在值得做：{{ item.fit_reason | md_text }}
+- MVP：{{ (item.source_notes or "先做小范围手动原型，并找 5-10 个目标用户验证。") | md_text }}
+- 下一步：{{ item.suggested_action | md_text }}
 
 {% endfor %}
 
 ## 学习优先级
 
 {% for item in learning_priorities %}
-- 技能：{{ item.title }}
-  为什么重要：{{ item.summary }}
-  建议资源类型：{{ item.suggested_action }}
+- 技能：{{ item.title | md_text }}
+  为什么重要：{{ item.summary | md_text }}
+  建议资源类型：{{ item.suggested_action | md_text }}
 {% endfor %}
 
 ## 本周行动计划
 
 {% for action in actions %}
-- {{ action }}
+- {{ action | md_text }}
 {% endfor %}
 
 ## 来源列表
@@ -168,12 +169,19 @@ ZH_TEMPLATE = """# 新加坡 AI 与 FinTech 机会雷达 | {{ generated_at[:10] 
 """
 
 
-def md_cell(value: object) -> str:
+def md_text(value: object) -> str:
     if value is None:
         return ""
     text = str(value)
-    text = re.sub(r"\s+", " ", text.replace("\r", " ").replace("\n", " "))
-    return text.replace("|", r"\|").strip()
+    text = escape(text, quote=False)
+    text = text.replace("\r", " ").replace("\n", " ")
+    text = re.sub(r"\s+", " ", text)
+    return text.strip()
+
+
+def md_cell(value: object) -> str:
+    text = md_text(value)
+    return text.replace("|", r"\|")
 
 
 def safe_url(value: object) -> str:
@@ -194,6 +202,7 @@ def fmt_score(value: object) -> str:
 
 def _register_filters(env: Environment) -> None:
     env.filters["md_cell"] = md_cell
+    env.filters["md_text"] = md_text
     env.filters["safe_url"] = safe_url
     env.filters["fmt_score"] = fmt_score
 

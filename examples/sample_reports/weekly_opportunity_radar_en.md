@@ -4,7 +4,7 @@
 
 ## Executive Summary
 
-- Strongest signals this week cluster around job, event for the Singapore AI & FinTech Transition audience.
+- Strongest signals this week cluster around job, event for the Singapore AI &amp; FinTech Transition audience.
 - The best role categories to watch are AI Application Engineer, Data Analyst, Risk Analyst, supported by analytics, governance, and automation skills.
 - The most portfolio-friendly direction is to convert policy, company, and job signals into small report automation or risk analytics artifacts.
 - Recommended focus this week: pick one job family, one portfolio artifact, and one networking or event action.
