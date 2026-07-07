@@ -15,7 +15,9 @@ def run(command: list[str]) -> None:
 def main() -> int:
     python = sys.executable
     commands = [
+        [python, "-m", "ruff", "check", "."],
         [python, "-m", "compileall", "src", "tests", "scripts"],
+        [python, "-m", "mypy", "src/opportunity_radar"],
         [python, "-m", "pytest"],
         [
             python,
@@ -39,6 +41,7 @@ def main() -> int:
             ".tmp/demo",
         ],
         [python, "scripts/verify_line_endings.py"],
+        [python, "-m", "build"],
     ]
     for command in commands:
         run(command)

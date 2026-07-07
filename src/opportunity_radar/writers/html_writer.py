@@ -1,5 +1,6 @@
 from __future__ import annotations
 
+from html import escape
 from pathlib import Path
 
 import markdown
@@ -43,8 +44,10 @@ HTML_SHELL = """<!doctype html>
 
 
 def render_html(markdown_text: str, title: str, language: str = "en") -> str:
+    safe_title = escape(title, quote=True)
+    safe_language = "zh" if language == "zh" else "en"
     body = markdown.markdown(markdown_text, extensions=["tables", "sane_lists"])
-    return HTML_SHELL.format(title=title, language=language, body=body)
+    return HTML_SHELL.format(title=safe_title, language=safe_language, body=body)
 
 
 def write_html_report(
