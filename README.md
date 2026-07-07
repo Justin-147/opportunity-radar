@@ -1,9 +1,11 @@
-# Opportunity Radar: Singapore AI & FinTech Opportunity Intelligence System
+﻿# Opportunity Radar: Singapore AI & FinTech Opportunity Intelligence System
 
-![tests](https://github.com/Justin-147/opportunity-radar/actions/workflows/tests.yml/badge.svg)
+[![tests](https://github.com/Justin-147/opportunity-radar/actions/workflows/tests.yml/badge.svg)](https://github.com/Justin-147/opportunity-radar/actions/workflows/tests.yml)
+[![Release](https://img.shields.io/github/v/release/Justin-147/opportunity-radar?label=release)](https://github.com/Justin-147/opportunity-radar/releases)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
-![Python](https://img.shields.io/badge/python-3.11%2B-blue.svg)
-
+[![Python](https://img.shields.io/badge/python-3.11%2B-blue.svg)](https://www.python.org/)
+[![Dashboard](https://img.shields.io/badge/dashboard-Streamlit-ff4b4b.svg)](README.md#dashboard)
+[![Status](https://img.shields.io/badge/status-v0.2.0-green.svg)](CHANGELOG.md)
 Opportunity Radar is a local-first opportunity intelligence system for technical, research, data, and engineering professionals exploring Singapore AI, FinTech, RegTech, risk analytics, data analytics, and digital transformation opportunities.
 
 It converts curated job, policy, company, event, learning, and side-hustle signals into structured weekly opportunity briefs with relevance scoring, actionability scoring, suggested next actions, and source lists.
@@ -275,3 +277,11 @@ python scripts/verify_line_endings.py
 ## Disclaimer
 
 Opportunity Radar is an informational opportunity intelligence prototype. It does not provide job guarantees, immigration advice, legal advice, investment advice, automated job application services, or automated outreach services.
+
+## Release Status
+
+Current release: `v0.2.0`.
+
+Opportunity Radar v0.2.0 is a local-first Singapore AI / FinTech / RegTech opportunity intelligence prototype. It supports deterministic report generation, manual input validation, isolated output roots, English and Chinese reports, and a Streamlit dashboard.
+
+This project is informational. It does not provide job guarantees, immigration advice, legal advice, investment advice, automated job applications, or automated outreach.
